@@ -1,0 +1,57 @@
+@import "vars.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "NotoSans";
+    font-weight: 400;
+}
+
+.container {
+    width: 1460px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.align-normal {
+    align-items: normal;
+}
+
+.btn {
+    font-size: $text-small;
+    font-weight: 700;
+    line-height: 25px;
+    background: linear-gradient(90deg, #B899FC 0%, #6AD2F4 100%);
+    border-radius: $big-border-radius;
+    border: none;
+    color: $text-default-color;
+    width: 238px;
+    height: 74px;
+    cursor: pointer;
+}
+
+.title {
+    font-size: $text-big;
+    line-height: 58px;
+    color: #0A071A;
+    text-transform: uppercase;
+    font-family: 'Play';
+    font-weight: 700;
+
+    &--white {
+        color: $text-default-color;
+    }
+}

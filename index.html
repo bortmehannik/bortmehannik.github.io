@@ -1,1 +1,451 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><!--[if IE]><link rel="icon" href="/favicon.ico"><![endif]--><title>Constructor</title><link href=/css/chunk-452630a2.fc4ddd30.css rel=prefetch><link href=/js/chunk-452630a2.a0b1b33a.js rel=prefetch><link href=/css/app.e6494143.css rel=preload as=style><link href=/js/app.b66b1019.js rel=preload as=script><link href=/js/chunk-vendors.b88ec44a.js rel=preload as=script><link href=/css/app.e6494143.css rel=stylesheet><link rel=icon type=image/png sizes=32x32 href=/img/icons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/img/icons/favicon-16x16.png><link rel=manifest href=/manifest.json><meta name=theme-color content=#4DBA87><meta name=apple-mobile-web-app-capable content=no><meta name=apple-mobile-web-app-status-bar-style content=default><meta name=apple-mobile-web-app-title content=constructor><link rel=apple-touch-icon href=/img/icons/apple-touch-icon-152x152.png><link rel=mask-icon href=/img/icons/safari-pinned-tab.svg color=#4DBA87><meta name=msapplication-TileImage content=/img/icons/msapplication-icon-144x144.png><meta name=msapplication-TileColor content=#000000></head><body><noscript><strong>We're sorry but constructor doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/js/chunk-vendors.b88ec44a.js></script><script src=/js/app.b66b1019.js></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/ui-kit.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>UNITREX.IO</title>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="container">
+                <div class="row space-between">
+                    <a href="#" class="nav__logo">
+                        <svg width="201" height="38" viewBox="0 0 201 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5348 5.64316C20.5479 2.19003 26.4775 2.1723 30.5112 5.60137L39.0765 12.8828C39.6464 13.3673 39.6661 14.2405 39.1187 14.7503L36.9699 16.7509L29.4591 9.80688C26.0966 6.69822 20.9062 6.70735 17.5548 9.82781L6.17793 20.4205C4.53546 21.9497 4.59462 24.5694 6.30446 26.023L14.8697 33.3044C19.8415 37.5309 27.1501 37.5091 32.0965 33.2529L45.8156 21.448C46.339 20.9977 46.3982 20.2083 45.9479 19.6849C45.4975 19.1616 44.7082 19.1024 44.1848 19.5527L30.4656 31.3576C26.4525 34.8107 20.5229 34.8284 16.4892 31.3993L7.92394 24.1179C7.354 23.6334 7.33428 22.7602 7.88177 22.2504L10.0305 20.2498L17.5413 27.1938C20.9038 30.3025 26.0942 30.2934 29.4457 27.1729L40.8225 16.5802C42.465 15.051 42.4058 12.4313 40.696 10.9777L32.1307 3.69634C27.159 -0.530193 19.8503 -0.508337 14.9039 3.74785L1.18478 15.5527C0.661409 16.003 0.602207 16.7924 1.05255 17.3158C1.5029 17.8392 2.29226 17.8984 2.81563 17.448L16.5348 5.64316ZM27.7617 11.6428L35.1348 18.4595L27.7418 25.3429C25.3479 27.5718 21.6405 27.5784 19.2387 25.3579L11.8656 18.5412L19.2586 11.6578C21.6525 9.42888 25.36 9.42236 27.7617 11.6428ZM25.5017 18.5004C25.5017 19.6048 24.6064 20.5 23.502 20.5C22.3977 20.5 21.5024 19.6048 21.5024 18.5004C21.5024 17.396 22.3977 16.5008 23.502 16.5008C24.6064 16.5008 25.5017 17.396 25.5017 18.5004ZM28.002 18.5004C28.002 20.9857 25.9873 23.0004 23.502 23.0004C21.0168 23.0004 19.002 20.9857 19.002 18.5004C19.002 16.0151 21.0168 14.0004 23.502 14.0004C25.9873 14.0004 28.002 16.0151 28.002 18.5004Z" fill="white"/>
+                            <path d="M63.6064 12.5166V25.8467H74.8857V12.5166H77.4346V24.3379C77.4346 25.7637 77.1807 26.7305 76.6729 27.2383C76.1748 27.7461 75.2275 28 73.8311 28H64.6465C63.25 28 62.293 27.7461 61.7754 27.2383C61.2676 26.7305 61.0137 25.7637 61.0137 24.3379V12.5166H63.6064ZM85.5059 28V12.5166H87.1318L98.7188 22.873C99.2363 23.332 99.8223 23.9814 100.477 24.8213C100.32 23.8643 100.242 22.5947 100.242 21.0127V12.5166H102.615V28H101.165L89.2559 17.2334C89.2168 17.1943 89.124 17.1113 88.9775 16.9844C88.8311 16.8574 88.7188 16.7549 88.6406 16.6768C88.5723 16.5986 88.4746 16.4961 88.3477 16.3691C88.2305 16.2324 88.1182 16.0957 88.0107 15.959C87.9033 15.8125 87.8008 15.6562 87.7031 15.4902C87.8203 16.4082 87.8789 17.5361 87.8789 18.874V28H85.5059ZM110.643 28V12.5166H113.235V28H110.643ZM127.254 14.626V28H124.676V14.626H117.601V12.5166H134.358V14.626H127.254ZM138.709 28V12.5166H151.189C152.332 12.5166 153.162 12.751 153.68 13.2197C154.207 13.6885 154.471 14.4551 154.471 15.5195V18.9766C154.471 20.041 154.207 20.8076 153.68 21.2764C153.162 21.7354 152.332 21.9648 151.189 21.9648H148.919L155.994 28H152.156L145.857 21.9648H141.302V28H138.709ZM150.179 14.5234H141.302V19.958H150.179C150.784 19.958 151.214 19.8506 151.468 19.6357C151.722 19.4209 151.849 19.001 151.849 18.376V16.1201C151.849 15.5049 151.717 15.085 151.453 14.8604C151.199 14.6357 150.774 14.5234 150.179 14.5234ZM161.561 28V12.5166H176.473V14.5967H164.153V18.9033H171.683V20.9541H164.153V25.876H176.59V28H161.561ZM180.53 28L188.03 20.0166L180.413 12.5166H184.134L189.554 18.376L194.651 12.5166H197.874L191.062 19.7822L199.368 28H195.647L189.495 21.3936L183.797 28H180.53Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <nav class="nav__items">
+                        <ul class="nav__list">
+                            <li>
+                                <a href="#">Help</a>
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#">About us</a>
+                            </li>
+                            <li>
+                                <a href="#">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#">Demo</a>
+                            </li>
+                            <li>
+                                <a href="#">Join us</a>
+                            </li>
+                        </ul>
+                        <div class="nav__switcher">
+                            <button class="switcher">
+                                En
+                                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L3.11552 3.91983C3.50677 4.45983 4.30691 4.47287 4.71555 3.94591L7 1" stroke="white" stroke-linecap="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="container">
+                <h1 class="header__title">Join <b>Unitrex.io:</b>
+                    <br>
+                    Universal Crypto
+                    <br>
+                    Trading Platform
+                </h1>
+                <div class="header__buttons">
+                    <button class="btn">Join us</button>
+                    <a class="header__link" href="#">
+                        More
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="16" fill="white"/>
+                            <path d="M15 13L17.9333 15.2C18.4667 15.6 18.4667 16.4 17.9333 16.8L15 19" stroke="#0A071A" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="header__more">
+                <div class="container">
+                    <div class="row space-between">
+                        <p class="header__text">
+                            Security-first toolset for <span class="pattern">PRO</span> crypto traders and investors*
+                        </p>
+                        <p class="header__text header__text--right">
+                            <svg width="140" height="28" viewBox="0 0 140 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.56317 11.7653L14.0014 6.32936L19.4418 11.7697L22.6043 8.60501L14.0014 0L5.39844 8.6028L8.56317 11.7653ZM0 14L3.16357 10.8365L6.32714 14L3.16357 17.1635L0 14ZM13.998 21.6728L8.55978 16.2346L5.39062 19.3949L5.39505 19.3993L13.998 27.9999L22.6009 19.3949L22.6031 19.3927L19.4384 16.2324L13.998 21.6728ZM21.6719 14.001L24.8354 10.8375L27.999 14.001L24.8354 17.1645L21.6719 14.001ZM14.0024 10.7881L17.2114 13.9992H17.2136L17.2114 14.0014L14.0024 17.2125L10.7935 14.0058L10.7891 13.9992L10.7935 13.9948L11.3552 13.4331L11.6295 13.161L14.0024 10.7881Z" fill="white"/>
+                                <path d="M32.9375 6.78418H39.8198C41.5272 6.78418 42.8187 7.22648 43.6945 8.11109C44.0244 8.43786 44.2845 8.82825 44.459 9.2586C44.6335 9.68894 44.7188 10.1502 44.7096 10.6145V10.6565C44.7155 11.0369 44.6625 11.4159 44.5526 11.78C44.4546 12.0935 44.3123 12.3913 44.1302 12.6646C43.9603 12.9223 43.7548 13.1546 43.5198 13.3546C43.2901 13.5522 43.0386 13.7229 42.7701 13.8632C43.5444 14.133 44.2408 14.5886 44.798 15.1902C45.2905 15.7504 45.5367 16.5244 45.5367 17.5122V17.5543C45.5507 18.1712 45.4165 18.7825 45.1453 19.3367C44.8825 19.8475 44.4972 20.2851 44.024 20.6106C43.489 20.9693 42.8932 21.2278 42.2658 21.3735C41.5204 21.5503 40.7562 21.6357 39.9901 21.6279H32.9375V6.78418ZM39.1298 12.7862C39.7253 12.815 40.3178 12.6869 40.8482 12.4147C41.055 12.2939 41.2239 12.1176 41.3357 11.9057C41.4475 11.6939 41.4977 11.455 41.4807 11.2161V11.174C41.4917 10.9539 41.4469 10.7345 41.3507 10.5362C41.2545 10.338 41.1098 10.1671 40.93 10.0395C40.5629 9.77857 40.0329 9.64809 39.3399 9.64809H36.1199V12.7862H39.1298ZM39.999 18.7684C40.5922 18.8016 41.1827 18.6659 41.7019 18.3769C41.9041 18.247 42.0678 18.0652 42.176 17.8505C42.2841 17.6358 42.3327 17.396 42.3167 17.1562V17.1142C42.3246 16.8862 42.2766 16.6597 42.1767 16.4546C42.0769 16.2495 41.9283 16.072 41.7439 15.9376C41.3635 15.6428 40.7487 15.4953 39.8995 15.4953H36.1199V18.7684H39.999Z" fill="white"/>
+                                <path d="M49.6406 6.78418H52.9071V21.6323H49.6406V6.78418Z" fill="white"/>
+                                <path d="M57.8438 6.78418H60.8559L67.8178 15.9222V6.78418H71.0423V21.6323H68.2624L61.0726 12.1935V21.6323H57.8438V6.78418Z" fill="white"/>
+                                <path d="M80.9351 6.67871H83.9429L90.3055 21.633H86.8953L85.5374 18.3024H79.2588L77.9009 21.633H74.5703L80.9351 6.67871ZM84.3719 15.4186L82.3948 10.6019L80.4265 15.4186H84.3719Z" fill="white"/>
+                                <path d="M93.8359 6.78418H96.8481L103.806 15.9222V6.78418H107.03V21.6323H104.25L97.0604 12.1935V21.6323H93.8359V6.78418Z" fill="white"/>
+                                <path d="M118.789 21.8935C117.748 21.9024 116.716 21.7008 115.754 21.3008C114.85 20.9272 114.029 20.3763 113.34 19.6805C112.651 18.9846 112.109 18.158 111.745 17.2493C111.361 16.2989 111.166 15.2824 111.172 14.2572V14.2151C111.155 12.1943 111.933 10.2477 113.337 8.79472C114.028 8.08499 114.856 7.52231 115.77 7.1405C116.764 6.72864 117.832 6.52323 118.908 6.53676C119.545 6.53201 120.18 6.58904 120.806 6.70705C121.341 6.80826 121.864 6.96464 122.367 7.17368C122.823 7.36578 123.257 7.60755 123.661 7.89463C124.055 8.17462 124.424 8.48677 124.767 8.82789L122.69 11.2252C122.159 10.7356 121.564 10.3212 120.921 9.99336C120.289 9.69119 119.595 9.53978 118.895 9.55106C118.312 9.54484 117.734 9.6627 117.201 9.89681C116.667 10.1309 116.189 10.4759 115.799 10.9089C115.412 11.3408 115.109 11.841 114.905 12.384C114.692 12.9578 114.585 13.5655 114.589 14.1775V14.2196C114.587 14.8307 114.694 15.4374 114.905 16.0109C115.106 16.5558 115.406 17.0589 115.79 17.4948C116.177 17.9332 116.654 18.2833 117.188 18.5213C117.722 18.7594 118.301 18.88 118.886 18.8748C119.631 18.8983 120.37 18.738 121.038 18.4082C121.674 18.0615 122.262 17.6333 122.787 17.1343L124.866 19.2353C124.499 19.6337 124.102 20.0033 123.678 20.341C123.262 20.67 122.811 20.9512 122.332 21.1792C121.821 21.4194 121.284 21.5969 120.73 21.7078C120.091 21.8359 119.441 21.8981 118.789 21.8935Z" fill="white"/>
+                                <path d="M128.719 6.78418H139.894V9.69011H131.932V12.7022H138.943V15.6081H131.943V18.7264H140.004V21.6323H128.725L128.719 6.78418Z" fill="white"/>
+                            </svg>
+                            <span>*Binance protects your assets and provides liquidity on Unitrex.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="header__currencies">
+                <div class="container">
+                    <ul class="currencies-list">
+                        <li class="currencies-list__element">
+                            <span class="currencies-list__currency">BTC</span>
+                            <span class="currencies-list__price">$30,267.34</span>
+                            <span class="currencies-list__procent currencies-list__procent--red">
+                                <img src="assets/icons/low-icon.svg" alt="Down">
+                                -4.3%
+                            </span>
+                        </li>
+                        <li class="currencies-list__element">
+                            <span class="currencies-list__currency">ETH</span>
+                            <span class="currencies-list__price">$1,632.43</span>
+                            <span class="currencies-list__procent currencies-list__procent--green">
+                                <img src="assets/icons/high-icon.svg" alt="Up">
+                                +4.3%
+                            </span>
+                        </li>
+                        <li class="currencies-list__element">
+                            <span class="currencies-list__currency">SOL</span>
+                            <span class="currencies-list__price">$46.43</span>
+                            <span class="currencies-list__procent currencies-list__procent--green">
+                                <img src="assets/icons/high-icon.svg" alt="Up">
+                                +6.2%
+                            </span>
+                        </li>
+                        <li class="currencies-list__element">
+                            <span class="currencies-list__currency">GMT</span>
+                            <span class="currencies-list__price">$46.34</span>
+                            <span class="currencies-list__procent currencies-list__procent--red">
+                                <img src="assets/icons/low-icon.svg" alt="Down">
+                                -3.7%
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="schedule">
+                <img class="schedule__first" src="assets/images/lines_1.svg" alt="schedule_1">
+                <img class="schedule__second" src="assets/images/lines_1.svg" alt="schedule_2">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="crypto">
+            <div class="container">
+                <h2 class="title">Trade crypto <br> with cashbacks</h2>
+                <div class="table">
+                    <div class="table__head">
+                        <div class="row space-between">
+                            <div class="table__el table__el--20">Coin</div>
+                            <div class="table__el">Price</div>
+                            <div class="table__el">24h change</div>
+                            <div class="table__el">Turnover</div>
+                            <div class="table__el">Сapitalization</div>
+                            <div class="table__el table__el--15">Last 7 Days</div>
+                            <div class="table__el table__el--center">Action</div>
+                        </div>
+                    </div>
+                    <div class="table__body">
+                        <div class="row table__row space-between">
+                            <div class="table__el table__el--currency table__el--20">
+                                <img src="assets/icons/btc.svg" alt="BTC">
+                                <span>Bitcoin</span> BTC
+                            </div>
+                            <div class="table__el table__el--price">$46,632.43</div>
+                            <div class="table__el row table__el--low">
+                                <img src="assets/icons/low-icon-light.svg" alt="">
+                                -4.3%
+                            </div>
+                            <div class="table__el">$75720214</div>
+                            <div class="table__el">$3420214</div>
+                            <div class="table__el table__el--15">
+                                <svg width="152" height="34" viewBox="0 0 152 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 25.96L1.58594 30.44L4.51562 33L6.85938 29.16L11.5469 33L15.0625 29.16H21.5078L27.3672 25.96L29.125 27.88L34.3984 24.04H39.0859L42.6016 27.88L46.1172 29.16L47.2891 24.04L51.3906 18.28V13.16L53.1484 9.32L59.0078 3.56L60.7656 6.76V1H67.7969L71.3125 6.76L74.8281 8.04V13.16L78.9297 9.32L80.1016 5.48L85.375 9.32V3.56L91.2344 6.76L95.9219 10.6L97.6797 16.36L103.539 8.04L107.641 10.6L110.57 9.32V13.16L114.672 5.48L117.602 9.32L121.117 5.48L124.633 8.04V2.28L130.492 3.56L132.25 9.32V16.36L135.766 20.84L139.281 18.28L141.625 22.12L143.969 30.44L146.898 22.12L151 24.68" stroke="#F13164" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="table__el table__el--center">
+                                <a href="#" class="table__link" target="_blank">
+                                    <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.51148 3.4598C11.5221 1.7297 14.493 1.72082 16.514 3.43886L20.9843 7.23909C21.1801 7.40556 21.1869 7.70559 20.9988 7.88073L20.0285 8.78408L16.2605 5.30043C14.4206 3.5994 11.5805 3.60439 9.7466 5.31188L3.8094 10.8398C2.85492 11.7285 2.88931 13.2509 3.88293 14.0956L8.35321 17.8958C11.0307 20.172 14.9668 20.1602 17.6306 17.8681L24.7901 11.7076C25.1564 11.3924 25.1979 10.8399 24.8827 10.4736C24.5675 10.1073 24.015 10.0659 23.6487 10.3811L16.4892 16.5416C14.4785 18.2717 11.5077 18.2805 9.48668 16.5625L5.0164 12.7623C4.82058 12.5958 4.8138 12.2958 5.00191 12.1206L5.97213 11.2173L9.74016 14.7009C11.58 16.402 14.4202 16.397 16.2541 14.6895L22.1913 9.16152C23.1458 8.27283 23.1114 6.75045 22.1177 5.90576L17.6475 2.10554C14.97 -0.170643 11.0339 -0.158878 8.37006 2.13328L1.21055 8.29378C0.844245 8.60898 0.80281 9.16145 1.11801 9.52775C1.4332 9.89406 1.98567 9.9355 2.35198 9.6203L9.51148 3.4598ZM15.0725 6.5854L18.7442 9.97993L15.0616 13.4087C13.8979 14.4922 12.0957 14.4953 10.9282 13.416L7.25652 10.0214L10.9391 6.59267C12.1028 5.50918 13.905 5.50601 15.0725 6.5854ZM11.875 10C11.875 9.37871 12.3787 8.87503 13 8.87503C13.6213 8.87503 14.125 9.37871 14.125 10C14.125 10.6214 13.6213 11.125 13 11.125C12.3787 11.125 11.875 10.6214 11.875 10ZM13 7.12503C11.4122 7.12503 10.125 8.41221 10.125 10C10.125 11.5879 11.4122 12.875 13 12.875C14.5878 12.875 15.875 11.5879 15.875 10C15.875 8.41221 14.5878 7.12503 13 7.12503Z" fill="url(#paint0_linear_60_3079)"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_60_3079" x1="0.78125" y1="10.0007" x2="25.2194" y2="10.0007" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#DD7DFF"/>
+                                                <stop offset="1" stop-color="#6AD2F4"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <span>Trade</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row table__row space-between">
+                            <div class="table__el table__el--currency table__el--20">
+                                <img src="assets/icons/eth.svg" alt="ETH">
+                                <span>Ethereum</span> ETH
+                            </div>
+                            <div class="table__el table__el--price">$46,632.43</div>
+                            <div class="table__el row table__el--high">
+                                <img src="assets/icons/high-icon-light.svg" alt="">
+                                +5.3%
+                            </div>
+                            <div class="table__el">$75720214</div>
+                            <div class="table__el">$3420214</div>
+                            <div class="table__el table__el--15">
+                                <svg width="152" height="34" viewBox="0 0 152 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 26.8873L4.4749 33L10.8456 30.5549L14.8996 33L17.7954 30.5549L25.3243 33L29.3784 28.7211L32.8533 30.5549V26.8873L38.0656 28.7211L39.8031 30.5549L44.4363 28.7211V26.8873H48.4903V20.7747L50.8069 16.4958C50.8069 14.662 50.8069 10.8722 50.8069 10.3832C50.8069 9.7719 52.5444 5.49304 53.7027 6.71557C54.6293 7.6936 56.4054 9.56815 57.1776 10.3832L61.2317 8.54935L66.444 4.27049L68.7606 1.21417L72.8147 4.27049L78.027 6.71557L80.9228 1.21417L84.9768 4.27049C85.9421 2.84421 87.9884 0.23614 88.4517 1.21417C88.9151 2.19219 90.9614 3.65923 91.9266 4.27049L97.139 8.54935L98.8764 6.71557C100.035 5.49304 102.467 3.29248 102.93 4.27049C103.51 5.49301 107.564 4.88179 108.143 6.71557C108.606 8.1826 111.039 8.54935 112.197 8.54935L118.568 6.71557C118.761 7.32683 119.378 8.54935 120.305 8.54935C121.232 8.54935 124.552 7.32683 126.097 6.71557H129.571V12.8282L132.467 16.4958V20.7747L137.68 17.7183L140.575 26.8873L142.313 30.5549L146.946 25.0535L151 23.2197" stroke="#31CCB0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="table__el table__el--center">
+                                <a href="#" class="table__link" target="_blank">
+                                    <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.51148 3.4598C11.5221 1.7297 14.493 1.72082 16.514 3.43886L20.9843 7.23909C21.1801 7.40556 21.1869 7.70559 20.9988 7.88073L20.0285 8.78408L16.2605 5.30043C14.4206 3.5994 11.5805 3.60439 9.7466 5.31188L3.8094 10.8398C2.85492 11.7285 2.88931 13.2509 3.88293 14.0956L8.35321 17.8958C11.0307 20.172 14.9668 20.1602 17.6306 17.8681L24.7901 11.7076C25.1564 11.3924 25.1979 10.8399 24.8827 10.4736C24.5675 10.1073 24.015 10.0659 23.6487 10.3811L16.4892 16.5416C14.4785 18.2717 11.5077 18.2805 9.48668 16.5625L5.0164 12.7623C4.82058 12.5958 4.8138 12.2958 5.00191 12.1206L5.97213 11.2173L9.74016 14.7009C11.58 16.402 14.4202 16.397 16.2541 14.6895L22.1913 9.16152C23.1458 8.27283 23.1114 6.75045 22.1177 5.90576L17.6475 2.10554C14.97 -0.170643 11.0339 -0.158878 8.37006 2.13328L1.21055 8.29378C0.844245 8.60898 0.80281 9.16145 1.11801 9.52775C1.4332 9.89406 1.98567 9.9355 2.35198 9.6203L9.51148 3.4598ZM15.0725 6.5854L18.7442 9.97993L15.0616 13.4087C13.8979 14.4922 12.0957 14.4953 10.9282 13.416L7.25652 10.0214L10.9391 6.59267C12.1028 5.50918 13.905 5.50601 15.0725 6.5854ZM11.875 10C11.875 9.37871 12.3787 8.87503 13 8.87503C13.6213 8.87503 14.125 9.37871 14.125 10C14.125 10.6214 13.6213 11.125 13 11.125C12.3787 11.125 11.875 10.6214 11.875 10ZM13 7.12503C11.4122 7.12503 10.125 8.41221 10.125 10C10.125 11.5879 11.4122 12.875 13 12.875C14.5878 12.875 15.875 11.5879 15.875 10C15.875 8.41221 14.5878 7.12503 13 7.12503Z" fill="url(#paint0_linear_60_3079)"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_60_3079" x1="0.78125" y1="10.0007" x2="25.2194" y2="10.0007" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#DD7DFF"/>
+                                                <stop offset="1" stop-color="#6AD2F4"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <span>Trade</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row table__row space-between">
+                            <div class="table__el table__el--currency table__el--20">
+                                <img src="assets/icons/teth.svg" alt="USDT">
+                                <span>Tether</span> USDT
+                            </div>
+                            <div class="table__el table__el--price">$46,632.43</div>
+                            <div class="table__el row table__el--low">
+                                <img src="assets/icons/low-icon-light.svg" alt="">
+                                -4.3%
+                            </div>
+                            <div class="table__el">$75720214</div>
+                            <div class="table__el">$3420214</div>
+                            <div class="table__el table__el--15">
+                                <svg width="152" height="34" viewBox="0 0 152 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 25.96L1.58594 30.44L4.51562 33L6.85938 29.16L11.5469 33L15.0625 29.16H21.5078L27.3672 25.96L29.125 27.88L34.3984 24.04H39.0859L42.6016 27.88L46.1172 29.16L47.2891 24.04L51.3906 18.28V13.16L53.1484 9.32L59.0078 3.56L60.7656 6.76V1H67.7969L71.3125 6.76L74.8281 8.04V13.16L78.9297 9.32L80.1016 5.48L85.375 9.32V3.56L91.2344 6.76L95.9219 10.6L97.6797 16.36L103.539 8.04L107.641 10.6L110.57 9.32V13.16L114.672 5.48L117.602 9.32L121.117 5.48L124.633 8.04V2.28L130.492 3.56L132.25 9.32V16.36L135.766 20.84L139.281 18.28L141.625 22.12L143.969 30.44L146.898 22.12L151 24.68" stroke="#F13164" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="table__el table__el--center">
+                                <a href="#" class="table__link" target="_blank">
+                                    <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.51148 3.4598C11.5221 1.7297 14.493 1.72082 16.514 3.43886L20.9843 7.23909C21.1801 7.40556 21.1869 7.70559 20.9988 7.88073L20.0285 8.78408L16.2605 5.30043C14.4206 3.5994 11.5805 3.60439 9.7466 5.31188L3.8094 10.8398C2.85492 11.7285 2.88931 13.2509 3.88293 14.0956L8.35321 17.8958C11.0307 20.172 14.9668 20.1602 17.6306 17.8681L24.7901 11.7076C25.1564 11.3924 25.1979 10.8399 24.8827 10.4736C24.5675 10.1073 24.015 10.0659 23.6487 10.3811L16.4892 16.5416C14.4785 18.2717 11.5077 18.2805 9.48668 16.5625L5.0164 12.7623C4.82058 12.5958 4.8138 12.2958 5.00191 12.1206L5.97213 11.2173L9.74016 14.7009C11.58 16.402 14.4202 16.397 16.2541 14.6895L22.1913 9.16152C23.1458 8.27283 23.1114 6.75045 22.1177 5.90576L17.6475 2.10554C14.97 -0.170643 11.0339 -0.158878 8.37006 2.13328L1.21055 8.29378C0.844245 8.60898 0.80281 9.16145 1.11801 9.52775C1.4332 9.89406 1.98567 9.9355 2.35198 9.6203L9.51148 3.4598ZM15.0725 6.5854L18.7442 9.97993L15.0616 13.4087C13.8979 14.4922 12.0957 14.4953 10.9282 13.416L7.25652 10.0214L10.9391 6.59267C12.1028 5.50918 13.905 5.50601 15.0725 6.5854ZM11.875 10C11.875 9.37871 12.3787 8.87503 13 8.87503C13.6213 8.87503 14.125 9.37871 14.125 10C14.125 10.6214 13.6213 11.125 13 11.125C12.3787 11.125 11.875 10.6214 11.875 10ZM13 7.12503C11.4122 7.12503 10.125 8.41221 10.125 10C10.125 11.5879 11.4122 12.875 13 12.875C14.5878 12.875 15.875 11.5879 15.875 10C15.875 8.41221 14.5878 7.12503 13 7.12503Z" fill="url(#paint0_linear_60_3079)"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_60_3079" x1="0.78125" y1="10.0007" x2="25.2194" y2="10.0007" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#DD7DFF"/>
+                                                <stop offset="1" stop-color="#6AD2F4"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <span>Trade</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row table__row space-between">
+                            <div class="table__el table__el--currency table__el--20">
+                                <img src="assets/icons/sol.svg" alt="SOL">
+                                <span>Solana</span> SOL
+                            </div>
+                            <div class="table__el table__el--price">$46,632.43</div>
+                            <div class="table__el row table__el--low">
+                                <img src="assets/icons/low-icon-light.svg" alt="">
+                                -4.3%
+                            </div>
+                            <div class="table__el">$75720214</div>
+                            <div class="table__el">$3420214</div>
+                            <div class="table__el table__el--15">
+                                <svg width="152" height="34" viewBox="0 0 152 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 25.96L1.58594 30.44L4.51562 33L6.85938 29.16L11.5469 33L15.0625 29.16H21.5078L27.3672 25.96L29.125 27.88L34.3984 24.04H39.0859L42.6016 27.88L46.1172 29.16L47.2891 24.04L51.3906 18.28V13.16L53.1484 9.32L59.0078 3.56L60.7656 6.76V1H67.7969L71.3125 6.76L74.8281 8.04V13.16L78.9297 9.32L80.1016 5.48L85.375 9.32V3.56L91.2344 6.76L95.9219 10.6L97.6797 16.36L103.539 8.04L107.641 10.6L110.57 9.32V13.16L114.672 5.48L117.602 9.32L121.117 5.48L124.633 8.04V2.28L130.492 3.56L132.25 9.32V16.36L135.766 20.84L139.281 18.28L141.625 22.12L143.969 30.44L146.898 22.12L151 24.68" stroke="#F13164" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="table__el table__el--center">
+                                <a href="#" class="table__link" target="_blank">
+                                    <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.51148 3.4598C11.5221 1.7297 14.493 1.72082 16.514 3.43886L20.9843 7.23909C21.1801 7.40556 21.1869 7.70559 20.9988 7.88073L20.0285 8.78408L16.2605 5.30043C14.4206 3.5994 11.5805 3.60439 9.7466 5.31188L3.8094 10.8398C2.85492 11.7285 2.88931 13.2509 3.88293 14.0956L8.35321 17.8958C11.0307 20.172 14.9668 20.1602 17.6306 17.8681L24.7901 11.7076C25.1564 11.3924 25.1979 10.8399 24.8827 10.4736C24.5675 10.1073 24.015 10.0659 23.6487 10.3811L16.4892 16.5416C14.4785 18.2717 11.5077 18.2805 9.48668 16.5625L5.0164 12.7623C4.82058 12.5958 4.8138 12.2958 5.00191 12.1206L5.97213 11.2173L9.74016 14.7009C11.58 16.402 14.4202 16.397 16.2541 14.6895L22.1913 9.16152C23.1458 8.27283 23.1114 6.75045 22.1177 5.90576L17.6475 2.10554C14.97 -0.170643 11.0339 -0.158878 8.37006 2.13328L1.21055 8.29378C0.844245 8.60898 0.80281 9.16145 1.11801 9.52775C1.4332 9.89406 1.98567 9.9355 2.35198 9.6203L9.51148 3.4598ZM15.0725 6.5854L18.7442 9.97993L15.0616 13.4087C13.8979 14.4922 12.0957 14.4953 10.9282 13.416L7.25652 10.0214L10.9391 6.59267C12.1028 5.50918 13.905 5.50601 15.0725 6.5854ZM11.875 10C11.875 9.37871 12.3787 8.87503 13 8.87503C13.6213 8.87503 14.125 9.37871 14.125 10C14.125 10.6214 13.6213 11.125 13 11.125C12.3787 11.125 11.875 10.6214 11.875 10ZM13 7.12503C11.4122 7.12503 10.125 8.41221 10.125 10C10.125 11.5879 11.4122 12.875 13 12.875C14.5878 12.875 15.875 11.5879 15.875 10C15.875 8.41221 14.5878 7.12503 13 7.12503Z" fill="url(#paint0_linear_60_3079)"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_60_3079" x1="0.78125" y1="10.0007" x2="25.2194" y2="10.0007" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#DD7DFF"/>
+                                                <stop offset="1" stop-color="#6AD2F4"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <span>Trade</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row table__row space-between">
+                            <div class="table__el table__el--currency table__el--20">
+                                <img src="assets/icons/card.svg" alt="ADA">
+                                <span>Cardano</span> ADA
+                            </div>
+                            <div class="table__el table__el--price">$46,632.43</div>
+                            <div class="table__el row table__el--low">
+                                <img src="assets/icons/low-icon-light.svg" alt="">
+                                -4.3%
+                            </div>
+                            <div class="table__el">$75720214</div>
+                            <div class="table__el">$3420214</div>
+                            <div class="table__el table__el--15">
+                                <svg width="152" height="34" viewBox="0 0 152 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 25.96L1.58594 30.44L4.51562 33L6.85938 29.16L11.5469 33L15.0625 29.16H21.5078L27.3672 25.96L29.125 27.88L34.3984 24.04H39.0859L42.6016 27.88L46.1172 29.16L47.2891 24.04L51.3906 18.28V13.16L53.1484 9.32L59.0078 3.56L60.7656 6.76V1H67.7969L71.3125 6.76L74.8281 8.04V13.16L78.9297 9.32L80.1016 5.48L85.375 9.32V3.56L91.2344 6.76L95.9219 10.6L97.6797 16.36L103.539 8.04L107.641 10.6L110.57 9.32V13.16L114.672 5.48L117.602 9.32L121.117 5.48L124.633 8.04V2.28L130.492 3.56L132.25 9.32V16.36L135.766 20.84L139.281 18.28L141.625 22.12L143.969 30.44L146.898 22.12L151 24.68" stroke="#F13164" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="table__el table__el--center">
+                                <a href="#" class="table__link" target="_blank">
+                                    <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.51148 3.4598C11.5221 1.7297 14.493 1.72082 16.514 3.43886L20.9843 7.23909C21.1801 7.40556 21.1869 7.70559 20.9988 7.88073L20.0285 8.78408L16.2605 5.30043C14.4206 3.5994 11.5805 3.60439 9.7466 5.31188L3.8094 10.8398C2.85492 11.7285 2.88931 13.2509 3.88293 14.0956L8.35321 17.8958C11.0307 20.172 14.9668 20.1602 17.6306 17.8681L24.7901 11.7076C25.1564 11.3924 25.1979 10.8399 24.8827 10.4736C24.5675 10.1073 24.015 10.0659 23.6487 10.3811L16.4892 16.5416C14.4785 18.2717 11.5077 18.2805 9.48668 16.5625L5.0164 12.7623C4.82058 12.5958 4.8138 12.2958 5.00191 12.1206L5.97213 11.2173L9.74016 14.7009C11.58 16.402 14.4202 16.397 16.2541 14.6895L22.1913 9.16152C23.1458 8.27283 23.1114 6.75045 22.1177 5.90576L17.6475 2.10554C14.97 -0.170643 11.0339 -0.158878 8.37006 2.13328L1.21055 8.29378C0.844245 8.60898 0.80281 9.16145 1.11801 9.52775C1.4332 9.89406 1.98567 9.9355 2.35198 9.6203L9.51148 3.4598ZM15.0725 6.5854L18.7442 9.97993L15.0616 13.4087C13.8979 14.4922 12.0957 14.4953 10.9282 13.416L7.25652 10.0214L10.9391 6.59267C12.1028 5.50918 13.905 5.50601 15.0725 6.5854ZM11.875 10C11.875 9.37871 12.3787 8.87503 13 8.87503C13.6213 8.87503 14.125 9.37871 14.125 10C14.125 10.6214 13.6213 11.125 13 11.125C12.3787 11.125 11.875 10.6214 11.875 10ZM13 7.12503C11.4122 7.12503 10.125 8.41221 10.125 10C10.125 11.5879 11.4122 12.875 13 12.875C14.5878 12.875 15.875 11.5879 15.875 10C15.875 8.41221 14.5878 7.12503 13 7.12503Z" fill="url(#paint0_linear_60_3079)"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_60_3079" x1="0.78125" y1="10.0007" x2="25.2194" y2="10.0007" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#DD7DFF"/>
+                                                <stop offset="1" stop-color="#6AD2F4"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <span>Trade</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row table__row space-between">
+                            <div class="table__el table__el--currency table__el--20">
+                                <img src="assets/icons/lite.svg" alt="LTC">
+                                <span>Litecoin</span> LTC
+                            </div>
+                            <div class="table__el table__el--price">$46,632.43</div>
+                            <div class="table__el row table__el--low">
+                                <img src="assets/icons/low-icon-light.svg" alt="">
+                                -4.3%
+                            </div>
+                            <div class="table__el">$75720214</div>
+                            <div class="table__el">$3420214</div>
+                            <div class="table__el table__el--15">
+                                <svg width="152" height="34" viewBox="0 0 152 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 25.96L1.58594 30.44L4.51562 33L6.85938 29.16L11.5469 33L15.0625 29.16H21.5078L27.3672 25.96L29.125 27.88L34.3984 24.04H39.0859L42.6016 27.88L46.1172 29.16L47.2891 24.04L51.3906 18.28V13.16L53.1484 9.32L59.0078 3.56L60.7656 6.76V1H67.7969L71.3125 6.76L74.8281 8.04V13.16L78.9297 9.32L80.1016 5.48L85.375 9.32V3.56L91.2344 6.76L95.9219 10.6L97.6797 16.36L103.539 8.04L107.641 10.6L110.57 9.32V13.16L114.672 5.48L117.602 9.32L121.117 5.48L124.633 8.04V2.28L130.492 3.56L132.25 9.32V16.36L135.766 20.84L139.281 18.28L141.625 22.12L143.969 30.44L146.898 22.12L151 24.68" stroke="#F13164" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="table__el table__el--center">
+                                <a href="#" class="table__link" target="_blank">
+                                    <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.51148 3.4598C11.5221 1.7297 14.493 1.72082 16.514 3.43886L20.9843 7.23909C21.1801 7.40556 21.1869 7.70559 20.9988 7.88073L20.0285 8.78408L16.2605 5.30043C14.4206 3.5994 11.5805 3.60439 9.7466 5.31188L3.8094 10.8398C2.85492 11.7285 2.88931 13.2509 3.88293 14.0956L8.35321 17.8958C11.0307 20.172 14.9668 20.1602 17.6306 17.8681L24.7901 11.7076C25.1564 11.3924 25.1979 10.8399 24.8827 10.4736C24.5675 10.1073 24.015 10.0659 23.6487 10.3811L16.4892 16.5416C14.4785 18.2717 11.5077 18.2805 9.48668 16.5625L5.0164 12.7623C4.82058 12.5958 4.8138 12.2958 5.00191 12.1206L5.97213 11.2173L9.74016 14.7009C11.58 16.402 14.4202 16.397 16.2541 14.6895L22.1913 9.16152C23.1458 8.27283 23.1114 6.75045 22.1177 5.90576L17.6475 2.10554C14.97 -0.170643 11.0339 -0.158878 8.37006 2.13328L1.21055 8.29378C0.844245 8.60898 0.80281 9.16145 1.11801 9.52775C1.4332 9.89406 1.98567 9.9355 2.35198 9.6203L9.51148 3.4598ZM15.0725 6.5854L18.7442 9.97993L15.0616 13.4087C13.8979 14.4922 12.0957 14.4953 10.9282 13.416L7.25652 10.0214L10.9391 6.59267C12.1028 5.50918 13.905 5.50601 15.0725 6.5854ZM11.875 10C11.875 9.37871 12.3787 8.87503 13 8.87503C13.6213 8.87503 14.125 9.37871 14.125 10C14.125 10.6214 13.6213 11.125 13 11.125C12.3787 11.125 11.875 10.6214 11.875 10ZM13 7.12503C11.4122 7.12503 10.125 8.41221 10.125 10C10.125 11.5879 11.4122 12.875 13 12.875C14.5878 12.875 15.875 11.5879 15.875 10C15.875 8.41221 14.5878 7.12503 13 7.12503Z" fill="url(#paint0_linear_60_3079)"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_60_3079" x1="0.78125" y1="10.0007" x2="25.2194" y2="10.0007" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#DD7DFF"/>
+                                                <stop offset="1" stop-color="#6AD2F4"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <span>Trade</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" target="_blank" class="crypto__link">
+                    <span>Show in Screener</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="benefits">
+            <div class="container">
+                <div class="row space-between align-normal">
+                    <div class="benefits__group">
+                        <div class="benefits__card no-hover">
+                            <svg class="both" width="120" height="10" viewBox="0 0 120 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="120" height="10" rx="5" fill="url(#paint0_linear_1_479)"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_1_479" x1="0" y1="5" x2="120" y2="5" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#DD7DFF"/>
+                                        <stop offset="1" stop-color="#6AD2F4"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <p class="benefits__title benefits__title--big title">Benefits you get</p>
+                        </div>
+                        <div class="benefits__card benefits__card--big">
+                            <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L65.2857 65.2857M65.2857 65.2857L92.4716 38.0998C94.8148 35.7566 94.8148 31.9576 92.4716 29.6145L65.2857 2.42857M65.2857 65.2857L32.4286 98.1429M35.2857 1L71 36.7143M38.1429 63.8571L1 101M101 63.8571L66.7143 98.1429" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1 1L65.2857 65.2857M65.2857 65.2857L92.4716 38.0998C94.8148 35.7566 94.8148 31.9576 92.4716 29.6145L65.2857 2.42857M65.2857 65.2857L32.4286 98.1429M35.2857 1L71 36.7143M38.1429 63.8571L1 101M101 63.8571L66.7143 98.1429" stroke="url(#paint0_linear_1_477)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_1_477" x1="1" y1="51" x2="101" y2="51" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#DD7DFF"/>
+                                        <stop offset="1" stop-color="#6AD2F4"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <p class="benefits__title">Risks  control</p>
+                        </div>
+                    </div>
+                    <div class="benefits__group">
+                        <div class="benefits__card benefits__card--big">
+                            <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M38.1429 101L1 63.3188M36.7143 67.6667L8.00898 38.5453C5.70639 36.2094 5.70638 32.4573 8.00898 30.1213L36.7143 1M32.4286 37.2319L61.0127 8.23353C63.3626 5.84955 67.2088 5.84954 69.5588 8.23353L98.1429 37.2319M63.8571 101L101 63.3188M62.5 32L83.5 53M72.4204 62L47 87.4204M45 45L58 58" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M38.1429 101L1 63.3188M36.7143 67.6667L8.00898 38.5453C5.70639 36.2094 5.70638 32.4573 8.00898 30.1213L36.7143 1M32.4286 37.2319L61.0127 8.23353C63.3626 5.84955 67.2088 5.84954 69.5588 8.23353L98.1429 37.2319M63.8571 101L101 63.3188M62.5 32L83.5 53M72.4204 62L47 87.4204M45 45L58 58" stroke="url(#paint0_linear_1_492)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_1_492" x1="1" y1="51" x2="101" y2="51" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#DD7DFF"/>
+                                        <stop offset="1" stop-color="#6AD2F4"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <p class="benefits__title">Powerful smart trading + scalping terminal</p>
+                        </div>
+                        <div class="benefits__card">
+                            <svg width="102" height="100" viewBox="0 0 102 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M67.6666 39L34.0306 5.36397C30.5159 1.84925 24.8174 1.84924 21.3027 5.36396L1 25.6667M62.3333 1.66667L101 40.3333M88 69.3333L58.3333 99M1 46.6667L27 20.6667M75 56H92C96.9705 56 101 60.0294 101 65V80.5M83.5 1.66667L101 19.1666M58.636 72.0306L39.364 91.3027C35.8492 94.8174 30.1508 94.8174 26.636 91.3027L7.36396 72.0306C3.84924 68.5159 3.84924 62.8174 7.36395 59.3027L26.636 40.0306C30.1508 36.5159 35.8493 36.5159 39.364 40.0306L58.636 59.3027C62.1507 62.8174 62.1507 68.5159 58.636 72.0306Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M67.6666 39L34.0306 5.36397C30.5159 1.84925 24.8174 1.84924 21.3027 5.36396L1 25.6667M62.3333 1.66667L101 40.3333M88 69.3333L58.3333 99M1 46.6667L27 20.6667M75 56H92C96.9705 56 101 60.0294 101 65V80.5M83.5 1.66667L101 19.1666M58.636 72.0306L39.364 91.3027C35.8492 94.8174 30.1508 94.8174 26.636 91.3027L7.36396 72.0306C3.84924 68.5159 3.84924 62.8174 7.36395 59.3027L26.636 40.0306C30.1508 36.5159 35.8493 36.5159 39.364 40.0306L58.636 59.3027C62.1507 62.8174 62.1507 68.5159 58.636 72.0306Z" stroke="url(#paint0_linear_1_486)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_1_486" x1="1" y1="49" x2="101" y2="49" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#DD7DFF"/>
+                                        <stop offset="1" stop-color="#6AD2F4"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <p class="benefits__title">Zero payments & cashback</p>
+                        </div>
+                    </div>
+                    <div class="benefits__group">
+                        <div class="benefits__card">
+                            <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 65.1026L37.3636 101M1 31.7692L37.3636 67.6667M71.1299 101L37.3636 67.6667M3.5974 3.5641L41.2597 40.7436M32.1688 1L64.2071 32.6275C66.5869 34.9768 66.5868 38.8181 64.2071 41.1674L37.3636 67.6667M65.9351 3.5641L95.3759 32.6275C97.7557 34.9768 97.7557 38.8181 95.3759 41.1674L72.8578 63.3967C70.4781 65.746 70.4781 69.5873 72.8578 71.9366L101 99.718" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1 65.1026L37.3636 101M1 31.7692L37.3636 67.6667M71.1299 101L37.3636 67.6667M3.5974 3.5641L41.2597 40.7436M32.1688 1L64.2071 32.6275C66.5869 34.9768 66.5868 38.8181 64.2071 41.1674L37.3636 67.6667M65.9351 3.5641L95.3759 32.6275C97.7557 34.9768 97.7557 38.8181 95.3759 41.1674L72.8578 63.3967C70.4781 65.746 70.4781 69.5873 72.8578 71.9366L101 99.718" stroke="url(#paint0_linear_1_504)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_1_504" x1="1" y1="51" x2="101" y2="51" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#DD7DFF"/>
+                                        <stop offset="1" stop-color="#6AD2F4"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <p class="benefits__title">Pro trading bots</p>
+                        </div>
+                        <div class="benefits__card benefits__card--big">
+                            <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 101L35.2857 66.7143M101 69.5714L32.4286 1L62.4716 31.0431C64.8148 33.3862 64.8148 37.1852 62.4716 39.5284L35.2857 66.7143M35.2857 66.7143L69.5714 101M1 69.5714L31.0431 39.5284C33.3862 37.1852 33.3862 33.3862 31.0431 31.0431L1 1M63.8571 1L101 38.1429" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M1 101L35.2857 66.7143M101 69.5714L32.4286 1L62.4716 31.0431C64.8148 33.3862 64.8148 37.1852 62.4716 39.5284L35.2857 66.7143M35.2857 66.7143L69.5714 101M1 69.5714L31.0431 39.5284C33.3862 37.1852 33.3862 33.3862 31.0431 31.0431L1 1M63.8571 1L101 38.1429" stroke="url(#paint0_linear_1_498)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear_1_498" x1="1" y1="51" x2="101" y2="51" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#DD7DFF"/>
+                                        <stop offset="1" stop-color="#6AD2F4"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <p class="benefits__title">Extra capital pools</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

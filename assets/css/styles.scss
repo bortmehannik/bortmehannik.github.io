@@ -693,6 +693,59 @@ header {
     }
 }
 
+.solution {
+    &__title {
+        font-family: 'Play';
+        font-size: $text-medium;
+        font-weight: 700;
+    }
+
+    &__list {
+        font-size: $text-small;
+        list-style: none;
+
+        li {
+            position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            &:before {
+                content: '';
+                width: 10px;
+                height: 10px;
+                border: 1px solid #0A071A;
+                position: absolute;
+                left: -15px;
+                bottom: 5px;
+                transform: rotate(45deg);
+            }
+        }
+
+        &--first {
+            li {
+                &:after {
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    border: 1px solid #DD7DFF;
+                    background: #DD7DFF;
+                    opacity: 0.5;
+                    position: absolute;
+                    left: -15px;
+                    bottom: 5px;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        span {
+            opacity: 0.7;
+        }
+    }
+}
+
 @keyframes dragFirst {
     0% {
         bottom: 0;

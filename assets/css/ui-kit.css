@@ -3,30 +3,36 @@
   font-weight: 400;
   src: url(../fonts/Play/Play-Regular.ttf) format("truetype");
 }
+
 @font-face {
   font-family: "Play";
   font-weight: 700;
   src: url(../fonts/Play/Play-Bold.ttf) format("truetype");
 }
+
 @font-face {
   font-family: "NotoSans";
   font-weight: 400;
   src: url(../fonts/Noto_Sans/NotoSans-Regular.ttf) format("truetype");
 }
+
 @font-face {
   font-family: "NotoSans";
   font-weight: 600;
   src: url(../fonts/Noto_Sans/NotoSans-Medium.ttf) format("truetype");
 }
+
 @font-face {
   font-family: "NotoSans";
   font-weight: 700;
   src: url(../fonts/Noto_Sans/NotoSans-Bold.ttf) format("truetype");
 }
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -41,22 +47,31 @@ body {
 }
 
 .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .space-between {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .align-normal {
-  align-items: normal;
+  -webkit-box-align: normal;
+      -ms-flex-align: normal;
+          align-items: normal;
 }
 
 .btn {
   font-size: 18px;
   font-weight: 700;
   line-height: 25px;
+  background: -webkit-gradient(linear, left top, right top, from(#B899FC), to(#6AD2F4));
   background: linear-gradient(90deg, #B899FC 0%, #6AD2F4 100%);
   border-radius: 100px;
   border: none;
@@ -64,6 +79,7 @@ body {
   width: 238px;
   height: 74px;
   cursor: pointer;
+  position: relative;
 }
 
 .title {
@@ -71,9 +87,11 @@ body {
   line-height: 58px;
   color: #0A071A;
   text-transform: uppercase;
-  font-family: "Play";
+  font-family: 'Play';
   font-weight: 700;
 }
+
 .title--white {
   color: #ffffff;
-}/*# sourceMappingURL=ui-kit.css.map */
+}
+/*# sourceMappingURL=ui-kit.css.map */

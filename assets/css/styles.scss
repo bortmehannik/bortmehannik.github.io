@@ -5,6 +5,19 @@ header {
     background-size: cover;
     position: relative;
     overflow: hidden;
+
+    &:before {
+        content: '';
+        background: black;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#video {
+    position: absolute;
+    height: 100%;
 }
 
 .nav {
@@ -233,6 +246,13 @@ header {
     background: #15151A url(../images/bg-benefits.png) no-repeat;
     background-size: contain;
 
+    &__subtitle {
+        color: $text-default-color;
+        opacity: 0.7;
+        font-size: $text-medium;
+        margin-top: 21px;
+    }
+
     &__group {
         width: calc(33.333% - 25px);
         display: flex;
@@ -240,15 +260,50 @@ header {
         flex-direction: column;
     }
 
+    &__btn {
+        height: 40px;
+        width: 106px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.15;
+
+        svg, span {
+            position: relative;
+            z-index: 1;
+        }
+
+        svg {
+            margin-right: 6px;
+        }
+
+        &:before {
+            content: '';
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            background: rgba(25, 25, 25, 0.8);
+            border-radius: 100px;
+            z-index: 0;
+        }
+    }
+
     &__card {
         background-color: rgba(25, 25, 25, 0.8);
         border: 1px solid rgba(255, 255, 255, 0.05);
         border-radius: $default-border-radius;
         padding: 56px;
+        padding-bottom: 30px;
         position: relative;
 
         &:not(.no-hover) {
             cursor: pointer;
+        }
+
+        &.no-hover {
+            padding-bottom: 56px;
         }
 
         &:not(.no-hover):before {
@@ -276,13 +331,28 @@ header {
             height: 100px;
         }
 
+        .benefits__btn {
+            svg {
+                width: 25px;
+                height: 20px;
+            }
+        }
+
         &:last-child {
+            margin-top: 50px;
+        }
+
+        .benefits__btn {
             margin-top: 50px;
         }
 
         &--big {
             padding-top: 100px;
-            padding-bottom: 100px;
+            padding-bottom: 30px;
+
+            .benefits__btn {
+                margin-top: 140px;
+            }
         }
     }
 
@@ -694,15 +764,96 @@ header {
 }
 
 .solution {
+    background: #F1F1F1;
+    padding-top: 100px;
+    padding-bottom: 78px;
+
     &__title {
         font-family: 'Play';
         font-size: $text-medium;
         font-weight: 700;
     }
 
+    &__card {
+        padding: 27px 93px 57px 93px;
+        border-radius: 32px;
+        width: calc(50% - 62px);
+        position: relative;
+
+        &--border {
+            border: 1px dashed #979797;
+            background: #ffffff;
+
+            &:before {
+                content: '';
+                background: url(../images/solution-separator.svg);
+                width: 35px;
+                height: calc(100% - 85px);
+                position: absolute;
+                right: -80px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &--box-shadow {
+            background: #F1F1F1;
+            box-shadow: 0px 20px 130px rgba(0, 0, 0, 0.07);
+        }
+
+        svg {
+            margin-bottom: 78px;
+        }
+    }
+
+    &__group {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 70px;
+        margin-bottom: 80px;
+    }
+
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        transition: 0.2s;
+        color: $text-second-color;
+
+        &:hover {
+            color: $text-default-color;
+        }
+
+        span {
+            z-index: 1;
+            position: relative;
+        }
+
+        &:before {
+            content: '';
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            background: $text-default-color;
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            z-index: 0;
+            border-radius: 100px;
+            transition: 0.2s;
+        }
+
+        &:hover {
+            &:before {
+                opacity: 0;
+            }
+        }
+    }
+
     &__list {
         font-size: $text-small;
         list-style: none;
+        margin-top: 52px;
+        margin-bottom: 52px;
+        padding-left: 20px;
 
         li {
             position: relative;
@@ -713,13 +864,14 @@ header {
 
             &:before {
                 content: '';
-                width: 10px;
-                height: 10px;
+                width: 7px;
+                height: 7px;
                 border: 1px solid #0A071A;
                 position: absolute;
                 left: -15px;
                 bottom: 5px;
                 transform: rotate(45deg);
+                box-sizing: border-box;
             }
         }
 
@@ -727,21 +879,56 @@ header {
             li {
                 &:after {
                     content: '';
-                    width: 10px;
-                    height: 10px;
+                    width: 7px;
+                    height: 7px;
                     border: 1px solid #DD7DFF;
                     background: #DD7DFF;
                     opacity: 0.5;
                     position: absolute;
                     left: -15px;
-                    bottom: 5px;
+                    bottom: 9px;
                     transform: rotate(45deg);
+                    box-sizing: border-box;
+                }
+            }
+        }
+
+        &--second {
+            li {
+                &:after {
+                    content: '';
+                    width: 7px;
+                    height: 7px;
+                    border: 1px solid #6AD2F4;
+                    background: #6AD2F4;
+                    opacity: 0.5;
+                    position: absolute;
+                    left: -15px;
+                    bottom: 9px;
+                    transform: rotate(45deg);
+                    box-sizing: border-box;
                 }
             }
         }
 
         span {
             opacity: 0.7;
+        }
+    }
+
+    &__info {
+        text-align: center;
+
+        &-title {
+            font-size: $text-medium;
+            font-weight: 600;
+            margin-top: 28px;
+        }
+
+        &-sub {
+            margin-top: 23px;
+            font-size: 20px;
+            color: rgba(126, 126, 126, 1);
         }
     }
 }

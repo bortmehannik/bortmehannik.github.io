@@ -70,6 +70,28 @@ header {
             }
         }
     }
+
+    &__switcher-list {
+        position: relative;
+        display: none;
+
+        &.show {
+            display: block;
+        }
+
+        button {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 18px;
+            text-align: left;
+            padding-left: 12px;
+            position: absolute;
+            margin-top: 11px;
+            cursor: pointer;
+        }
+    }
 }
 
 .header {
@@ -230,13 +252,13 @@ header {
 
         &.schedule__first {
             left: 4px;
-            animation: dragFirst 0.5s infinite linear;
+            animation: dragFirst 1s infinite linear;
         }
 
         &.schedule__second {
             left: 0;
             bottom: 5px;
-            animation: dragSecond 0.5s infinite linear;
+            animation: dragSecond 1s infinite linear;
         }
     }
 }
@@ -968,5 +990,110 @@ header {
 
     100% {
         width: 100%;
+    }
+}
+
+@media (max-width: 1470px) {
+    .container {
+        width: 768px;
+    }
+
+    .schedule {
+        display: none;
+    }
+
+    .nav {
+        .container {
+            position: initial;
+        }
+
+        &__items {
+            flex-direction: column;
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100vh;
+            background: $text-default-color;
+            width: 298px;
+            align-items: flex-start;
+            padding-top: 96px;
+        }
+
+        &__list {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 24px;
+            width: calc(100% - 54px);
+
+            li {
+                padding: 20px 25px;
+                width: 100%;
+
+                &.active, &:hover {
+                    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.08);
+                }
+            }
+
+            a {
+                color: $text-second-color;
+            }
+        }
+    }
+
+    .header {
+        z-index: 0;
+
+        &__title {
+            font-size: 42px;
+            line-height: 50px;
+            margin-bottom: 50px;
+        }
+
+        &__text {
+            font-size: 19px;
+            line-height: 26px;
+            width: 50%;
+
+            .pattern {
+                &:before {
+                    top: -8px;
+                    left: -15px;
+                    width: 68px;
+                }
+            }
+
+            &--right {
+                margin-right: 0;
+                width: 33%;
+
+                span {
+                    font-size: 16px;
+                    line-height: 21px;
+                }
+            }
+        }
+
+        &__buttons {
+            margin-bottom: 65px;
+        }
+    }
+
+    .currencies-list {
+        &__element {
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+
+    .get-started {
+
+        &__wrapper {
+            grid-template-areas:
+                "l1 l1"
+                "l2 l3"
+                "l4 l5"
+                "l6 l6";
+        }
     }
 }

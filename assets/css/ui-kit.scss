@@ -56,3 +56,10 @@ body {
         color: $text-default-color;
     }
 }
+
+@media (max-width: 1470px) {
+    .btn {
+        width: 196px;
+        height: 60px;
+    }
+}

@@ -57,9 +57,22 @@ body {
     }
 }
 
-@media (max-width: 1470px) {
+.hidden-desktop {
+    display: none;
+}
+
+@media (max-width: 1512px) {
+    .title {
+        font-size: 28px;
+        line-height: 33px;
+    }
+
     .btn {
         width: 196px;
         height: 60px;
+    }
+
+    .hidden-desktop {
+        display: block;
     }
 }

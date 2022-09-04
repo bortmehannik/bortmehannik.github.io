@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/ui-kit.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/lib/animate.min.css">
     <title>UNITREX.IO</title>
 </head>
 <body>
@@ -55,6 +56,23 @@
                             </div>
                         </div>
                     </nav>
+                    <div class="nav__bg"></div>
+                    <button class="nav__burger hidden-desktop" id="menu-btn">
+                        <svg class="nav__open" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" y="0.5" width="37" height="37" rx="18.5" stroke="white"/>
+                            <path d="M14 13L28 13" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M13 19H25" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M10 25L24 25" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+
+                        <svg class="nav__close" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.5">
+                            <rect x="0.5" y="0.5" width="37" height="37" rx="18.5" stroke="#0A071A"/>
+                            <path d="M14.0498 23.9497L23.9493 14.0502" stroke="#0A071A" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M23.9502 23.9497L14.0507 14.0502" stroke="#0A071A" stroke-width="1.5" stroke-linecap="round"/>
+                            </g>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -102,7 +120,7 @@
             <div class="header__currencies">
                 <div class="container">
                     <ul class="currencies-list">
-                        <li class="currencies-list__element">
+                        <li class="currencies-list__element wow animate__animated animate__fadeInUp" data-wow-delay="0.7s">
                             <span class="currencies-list__currency">BTC</span>
                             <span class="currencies-list__price">$30,267.34</span>
                             <span class="currencies-list__procent currencies-list__procent--red">
@@ -110,7 +128,7 @@
                                 -4.3%
                             </span>
                         </li>
-                        <li class="currencies-list__element">
+                        <li class="currencies-list__element wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
                             <span class="currencies-list__currency">ETH</span>
                             <span class="currencies-list__price">$1,632.43</span>
                             <span class="currencies-list__procent currencies-list__procent--green">
@@ -118,7 +136,7 @@
                                 +4.3%
                             </span>
                         </li>
-                        <li class="currencies-list__element">
+                        <li class="currencies-list__element wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
                             <span class="currencies-list__currency">SOL</span>
                             <span class="currencies-list__price">$46.43</span>
                             <span class="currencies-list__procent currencies-list__procent--green">
@@ -126,7 +144,7 @@
                                 +6.2%
                             </span>
                         </li>
-                        <li class="currencies-list__element">
+                        <li class="currencies-list__element wow animate__animated animate__fadeInUp">
                             <span class="currencies-list__currency">GMT</span>
                             <span class="currencies-list__price">$46.34</span>
                             <span class="currencies-list__procent currencies-list__procent--red">
@@ -149,8 +167,8 @@
         <div class="solution">
             <div class="container">
                 <h2 class="title">UNITREX is a multi-faceted <br> solution for:</h2>
-                <div class="solution__group">
-                    <div class="solution__card solution__card--border">
+                <div class="solution__group" data-wow-duration="1.2s">
+                    <div class="solution__card solution__card--border wow animate__animated animate__fadeInLeft">
                         <svg width="196" height="220" viewBox="0 0 196 220" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path opacity="0.25" d="M42.5117 13.7639C42.5117 4.84931 50.9488 0.212239 59.4556 4.45145L181.05 65.0453C186.803 67.9126 190.78 74.0606 190.78 80.0903L190.78 194.107C190.78 203.201 182.023 207.794 173.427 203.209L51.8332 138.346C46.2843 135.386 42.5117 129.382 42.5117 123.511L42.5117 13.7639Z" fill="url(#paint0_linear_84_881)"/>
                             <path d="M30.0247 20.5555C30.0247 11.9707 38.1496 7.5052 46.3417 11.5876L167.936 72.1814C173.477 74.9426 177.306 80.8631 177.306 86.6698L177.306 200.686C177.306 209.444 168.873 213.867 160.595 209.451L39.0013 144.588C33.6577 141.738 30.0247 135.956 30.0247 130.303L30.0247 20.5555Z" stroke="#0A071A"/>
@@ -189,7 +207,7 @@
                             <span>Let’s see</span>
                         </button>
                     </div>
-                    <div class="solution__card solution__card--box-shadow">
+                    <div class="solution__card solution__card--box-shadow wow animate__animated animate__fadeInRight">
                         <svg width="184" height="220" viewBox="0 0 184 220" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path opacity="0.25" d="M31.3359 13.7639C31.3359 4.84931 39.773 0.212239 48.2798 4.45145L169.874 65.0453C175.628 67.9126 179.604 74.0606 179.604 80.0903L179.604 194.107C179.604 203.201 170.847 207.794 162.251 203.209L40.6575 138.346C35.1085 135.386 31.3359 129.382 31.3359 123.511L31.3359 13.7639Z" fill="url(#paint0_linear_60_2446)"/>
                             <path d="M18.8489 20.5555C18.8489 11.9707 26.9738 7.5052 35.1659 11.5876L156.76 72.1814C162.301 74.9426 166.13 80.8631 166.13 86.6698L166.13 200.686C166.13 209.444 157.697 213.867 149.42 209.451L27.8255 144.588C22.4819 141.738 18.8489 135.956 18.8489 130.303L18.8489 20.5555Z" stroke="#0A071A"/>
@@ -237,6 +255,11 @@
                     </div>
                 </div>
 
+                <div class="solution__slider-buttons">
+                    <button class="solution__slider-btn active"></button>
+                    <button class="solution__slider-btn"></button>
+                </div>
+
                 <div class="solution__info">
                     <p class="solution__info-logo">
                         <svg width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -266,151 +289,298 @@
             <div class="container">
                 <div class="row space-between align-normal">
                     <div class="benefits__group">
-                        <div class="benefits__card no-hover">
-                            <svg class="both" width="120" height="10" viewBox="0 0 120 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="120" height="10" rx="5" fill="url(#paint0_linear_1_479)"/>
-                                <defs>
-                                    <linearGradient id="paint0_linear_1_479" x1="0" y1="5" x2="120" y2="5" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#DD7DFF"/>
-                                        <stop offset="1" stop-color="#6AD2F4"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                            <p class="benefits__title benefits__title--big title">Benefits you get</p>
-                            <p class="benefits__subtitle">trading | investing crypto</p>
-                        </div>
-                        <div class="benefits__card benefits__card--big">
-                            <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L65.2857 65.2857M65.2857 65.2857L92.4716 38.0998C94.8148 35.7566 94.8148 31.9576 92.4716 29.6145L65.2857 2.42857M65.2857 65.2857L32.4286 98.1429M35.2857 1L71 36.7143M38.1429 63.8571L1 101M101 63.8571L66.7143 98.1429" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M1 1L65.2857 65.2857M65.2857 65.2857L92.4716 38.0998C94.8148 35.7566 94.8148 31.9576 92.4716 29.6145L65.2857 2.42857M65.2857 65.2857L32.4286 98.1429M35.2857 1L71 36.7143M38.1429 63.8571L1 101M101 63.8571L66.7143 98.1429" stroke="url(#paint0_linear_1_477)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <defs>
-                                    <linearGradient id="paint0_linear_1_477" x1="1" y1="51" x2="101" y2="51" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#DD7DFF"/>
-                                        <stop offset="1" stop-color="#6AD2F4"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                            <p class="benefits__title">Risks control</p>
-                            <button class="btn benefits__btn">
-                                <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.51148 3.4598C11.5221 1.7297 14.493 1.72082 16.514 3.43886L20.9843 7.23909C21.1801 7.40556 21.1869 7.70559 20.9988 7.88073L20.0285 8.78408L16.2605 5.30043C14.4206 3.5994 11.5805 3.60439 9.7466 5.31188L3.8094 10.8398C2.85492 11.7285 2.88931 13.2509 3.88293 14.0956L8.35321 17.8958C11.0307 20.172 14.9668 20.1602 17.6306 17.8681L24.7901 11.7076C25.1564 11.3924 25.1979 10.8399 24.8827 10.4736C24.5675 10.1073 24.015 10.0659 23.6487 10.3811L16.4892 16.5416C14.4785 18.2717 11.5077 18.2805 9.48668 16.5625L5.0164 12.7623C4.82058 12.5958 4.8138 12.2958 5.00191 12.1206L5.97213 11.2173L9.74016 14.7009C11.58 16.402 14.4202 16.397 16.2541 14.6895L22.1913 9.16152C23.1458 8.27283 23.1114 6.75045 22.1177 5.90576L17.6475 2.10554C14.97 -0.170643 11.0339 -0.158878 8.37006 2.13328L1.21055 8.29378C0.844245 8.60898 0.80281 9.16145 1.11801 9.52775C1.4332 9.89406 1.98567 9.9355 2.35198 9.6203L9.51148 3.4598ZM15.0725 6.5854L18.7442 9.97993L15.0616 13.4087C13.8979 14.4922 12.0957 14.4953 10.9282 13.416L7.25652 10.0214L10.9391 6.59267C12.1028 5.50918 13.905 5.50601 15.0725 6.5854ZM11.875 10C11.875 9.37871 12.3787 8.87503 13 8.87503C13.6213 8.87503 14.125 9.37871 14.125 10C14.125 10.6214 13.6213 11.125 13 11.125C12.3787 11.125 11.875 10.6214 11.875 10ZM13 7.12503C11.4122 7.12503 10.125 8.41221 10.125 10C10.125 11.5879 11.4122 12.875 13 12.875C14.5878 12.875 15.875 11.5879 15.875 10C15.875 8.41221 14.5878 7.12503 13 7.12503Z" fill="url(#paint0_linear_84_2643)"/>
+                        <div class="benefits__card no-hover wow animate__animated animate__fadeInUp">
+                            <div class="front">
+                                <svg class="both" width="120" height="10" viewBox="0 0 120 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="120" height="10" rx="5" fill="url(#paint0_linear_1_479)"/>
                                     <defs>
-                                        <linearGradient id="paint0_linear_84_2643" x1="0.78125" y1="10.0007" x2="25.2194" y2="10.0007" gradientUnits="userSpaceOnUse">
+                                        <linearGradient id="paint0_linear_1_479" x1="0" y1="5" x2="120" y2="5" gradientUnits="userSpaceOnUse">
                                             <stop stop-color="#DD7DFF"/>
                                             <stop offset="1" stop-color="#6AD2F4"/>
                                         </linearGradient>
                                     </defs>
                                 </svg>
-                                <span>Learn</span>
-                            </button>
+                                <p class="benefits__title benefits__title--big title">Benefits you get</p>
+                                <p class="benefits__subtitle">trading | investing crypto</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="benefits__group">
-                        <div class="benefits__card benefits__card--big">
-                            <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M38.1429 101L1 63.3188M36.7143 67.6667L8.00898 38.5453C5.70639 36.2094 5.70638 32.4573 8.00898 30.1213L36.7143 1M32.4286 37.2319L61.0127 8.23353C63.3626 5.84955 67.2088 5.84954 69.5588 8.23353L98.1429 37.2319M63.8571 101L101 63.3188M62.5 32L83.5 53M72.4204 62L47 87.4204M45 45L58 58" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M38.1429 101L1 63.3188M36.7143 67.6667L8.00898 38.5453C5.70639 36.2094 5.70638 32.4573 8.00898 30.1213L36.7143 1M32.4286 37.2319L61.0127 8.23353C63.3626 5.84955 67.2088 5.84954 69.5588 8.23353L98.1429 37.2319M63.8571 101L101 63.3188M62.5 32L83.5 53M72.4204 62L47 87.4204M45 45L58 58" stroke="url(#paint0_linear_1_492)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <defs>
-                                    <linearGradient id="paint0_linear_1_492" x1="1" y1="51" x2="101" y2="51" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#DD7DFF"/>
-                                        <stop offset="1" stop-color="#6AD2F4"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                            <p class="benefits__title">Powerful smart trading + scalping terminal</p>
-
-                            <button class="btn benefits__btn">
-                                <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.51148 3.4598C11.5221 1.7297 14.493 1.72082 16.514 3.43886L20.9843 7.23909C21.1801 7.40556 21.1869 7.70559 20.9988 7.88073L20.0285 8.78408L16.2605 5.30043C14.4206 3.5994 11.5805 3.60439 9.7466 5.31188L3.8094 10.8398C2.85492 11.7285 2.88931 13.2509 3.88293 14.0956L8.35321 17.8958C11.0307 20.172 14.9668 20.1602 17.6306 17.8681L24.7901 11.7076C25.1564 11.3924 25.1979 10.8399 24.8827 10.4736C24.5675 10.1073 24.015 10.0659 23.6487 10.3811L16.4892 16.5416C14.4785 18.2717 11.5077 18.2805 9.48668 16.5625L5.0164 12.7623C4.82058 12.5958 4.8138 12.2958 5.00191 12.1206L5.97213 11.2173L9.74016 14.7009C11.58 16.402 14.4202 16.397 16.2541 14.6895L22.1913 9.16152C23.1458 8.27283 23.1114 6.75045 22.1177 5.90576L17.6475 2.10554C14.97 -0.170643 11.0339 -0.158878 8.37006 2.13328L1.21055 8.29378C0.844245 8.60898 0.80281 9.16145 1.11801 9.52775C1.4332 9.89406 1.98567 9.9355 2.35198 9.6203L9.51148 3.4598ZM15.0725 6.5854L18.7442 9.97993L15.0616 13.4087C13.8979 14.4922 12.0957 14.4953 10.9282 13.416L7.25652 10.0214L10.9391 6.59267C12.1028 5.50918 13.905 5.50601 15.0725 6.5854ZM11.875 10C11.875 9.37871 12.3787 8.87503 13 8.87503C13.6213 8.87503 14.125 9.37871 14.125 10C14.125 10.6214 13.6213 11.125 13 11.125C12.3787 11.125 11.875 10.6214 11.875 10ZM13 7.12503C11.4122 7.12503 10.125 8.41221 10.125 10C10.125 11.5879 11.4122 12.875 13 12.875C14.5878 12.875 15.875 11.5879 15.875 10C15.875 8.41221 14.5878 7.12503 13 7.12503Z" fill="url(#paint0_linear_84_2643)"/>
+                        <div class="benefits__card benefits__card--big wow animate__animated animate__fadeInUp">
+                            <div class="front">
+                                <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L65.2857 65.2857M65.2857 65.2857L92.4716 38.0998C94.8148 35.7566 94.8148 31.9576 92.4716 29.6145L65.2857 2.42857M65.2857 65.2857L32.4286 98.1429M35.2857 1L71 36.7143M38.1429 63.8571L1 101M101 63.8571L66.7143 98.1429" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1 1L65.2857 65.2857M65.2857 65.2857L92.4716 38.0998C94.8148 35.7566 94.8148 31.9576 92.4716 29.6145L65.2857 2.42857M65.2857 65.2857L32.4286 98.1429M35.2857 1L71 36.7143M38.1429 63.8571L1 101M101 63.8571L66.7143 98.1429" stroke="url(#paint0_linear_1_477)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <defs>
-                                        <linearGradient id="paint0_linear_84_2643" x1="0.78125" y1="10.0007" x2="25.2194" y2="10.0007" gradientUnits="userSpaceOnUse">
+                                        <linearGradient id="paint0_linear_1_477" x1="1" y1="51" x2="101" y2="51" gradientUnits="userSpaceOnUse">
                                             <stop stop-color="#DD7DFF"/>
                                             <stop offset="1" stop-color="#6AD2F4"/>
                                         </linearGradient>
                                     </defs>
                                 </svg>
-                                <span>Learn</span>
-                            </button>
-                        </div>
-                        <div class="benefits__card">
-                            <svg width="102" height="100" viewBox="0 0 102 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M67.6666 39L34.0306 5.36397C30.5159 1.84925 24.8174 1.84924 21.3027 5.36396L1 25.6667M62.3333 1.66667L101 40.3333M88 69.3333L58.3333 99M1 46.6667L27 20.6667M75 56H92C96.9705 56 101 60.0294 101 65V80.5M83.5 1.66667L101 19.1666M58.636 72.0306L39.364 91.3027C35.8492 94.8174 30.1508 94.8174 26.636 91.3027L7.36396 72.0306C3.84924 68.5159 3.84924 62.8174 7.36395 59.3027L26.636 40.0306C30.1508 36.5159 35.8493 36.5159 39.364 40.0306L58.636 59.3027C62.1507 62.8174 62.1507 68.5159 58.636 72.0306Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M67.6666 39L34.0306 5.36397C30.5159 1.84925 24.8174 1.84924 21.3027 5.36396L1 25.6667M62.3333 1.66667L101 40.3333M88 69.3333L58.3333 99M1 46.6667L27 20.6667M75 56H92C96.9705 56 101 60.0294 101 65V80.5M83.5 1.66667L101 19.1666M58.636 72.0306L39.364 91.3027C35.8492 94.8174 30.1508 94.8174 26.636 91.3027L7.36396 72.0306C3.84924 68.5159 3.84924 62.8174 7.36395 59.3027L26.636 40.0306C30.1508 36.5159 35.8493 36.5159 39.364 40.0306L58.636 59.3027C62.1507 62.8174 62.1507 68.5159 58.636 72.0306Z" stroke="url(#paint0_linear_1_486)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <defs>
-                                    <linearGradient id="paint0_linear_1_486" x1="1" y1="49" x2="101" y2="49" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#DD7DFF"/>
-                                        <stop offset="1" stop-color="#6AD2F4"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                            <p class="benefits__title">Zero payments & cashback</p>
-
-                            <button class="btn benefits__btn">
-                                <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.51148 3.4598C11.5221 1.7297 14.493 1.72082 16.514 3.43886L20.9843 7.23909C21.1801 7.40556 21.1869 7.70559 20.9988 7.88073L20.0285 8.78408L16.2605 5.30043C14.4206 3.5994 11.5805 3.60439 9.7466 5.31188L3.8094 10.8398C2.85492 11.7285 2.88931 13.2509 3.88293 14.0956L8.35321 17.8958C11.0307 20.172 14.9668 20.1602 17.6306 17.8681L24.7901 11.7076C25.1564 11.3924 25.1979 10.8399 24.8827 10.4736C24.5675 10.1073 24.015 10.0659 23.6487 10.3811L16.4892 16.5416C14.4785 18.2717 11.5077 18.2805 9.48668 16.5625L5.0164 12.7623C4.82058 12.5958 4.8138 12.2958 5.00191 12.1206L5.97213 11.2173L9.74016 14.7009C11.58 16.402 14.4202 16.397 16.2541 14.6895L22.1913 9.16152C23.1458 8.27283 23.1114 6.75045 22.1177 5.90576L17.6475 2.10554C14.97 -0.170643 11.0339 -0.158878 8.37006 2.13328L1.21055 8.29378C0.844245 8.60898 0.80281 9.16145 1.11801 9.52775C1.4332 9.89406 1.98567 9.9355 2.35198 9.6203L9.51148 3.4598ZM15.0725 6.5854L18.7442 9.97993L15.0616 13.4087C13.8979 14.4922 12.0957 14.4953 10.9282 13.416L7.25652 10.0214L10.9391 6.59267C12.1028 5.50918 13.905 5.50601 15.0725 6.5854ZM11.875 10C11.875 9.37871 12.3787 8.87503 13 8.87503C13.6213 8.87503 14.125 9.37871 14.125 10C14.125 10.6214 13.6213 11.125 13 11.125C12.3787 11.125 11.875 10.6214 11.875 10ZM13 7.12503C11.4122 7.12503 10.125 8.41221 10.125 10C10.125 11.5879 11.4122 12.875 13 12.875C14.5878 12.875 15.875 11.5879 15.875 10C15.875 8.41221 14.5878 7.12503 13 7.12503Z" fill="url(#paint0_linear_84_2643)"/>
-                                    <defs>
-                                        <linearGradient id="paint0_linear_84_2643" x1="0.78125" y1="10.0007" x2="25.2194" y2="10.0007" gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#DD7DFF"/>
-                                            <stop offset="1" stop-color="#6AD2F4"/>
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                                <span>Learn</span>
-                            </button>
+                                <p class="benefits__title">Risks control</p>
+                                <button class="btn benefits__btn">
+                                    <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.51148 3.4598C11.5221 1.7297 14.493 1.72082 16.514 3.43886L20.9843 7.23909C21.1801 7.40556 21.1869 7.70559 20.9988 7.88073L20.0285 8.78408L16.2605 5.30043C14.4206 3.5994 11.5805 3.60439 9.7466 5.31188L3.8094 10.8398C2.85492 11.7285 2.88931 13.2509 3.88293 14.0956L8.35321 17.8958C11.0307 20.172 14.9668 20.1602 17.6306 17.8681L24.7901 11.7076C25.1564 11.3924 25.1979 10.8399 24.8827 10.4736C24.5675 10.1073 24.015 10.0659 23.6487 10.3811L16.4892 16.5416C14.4785 18.2717 11.5077 18.2805 9.48668 16.5625L5.0164 12.7623C4.82058 12.5958 4.8138 12.2958 5.00191 12.1206L5.97213 11.2173L9.74016 14.7009C11.58 16.402 14.4202 16.397 16.2541 14.6895L22.1913 9.16152C23.1458 8.27283 23.1114 6.75045 22.1177 5.90576L17.6475 2.10554C14.97 -0.170643 11.0339 -0.158878 8.37006 2.13328L1.21055 8.29378C0.844245 8.60898 0.80281 9.16145 1.11801 9.52775C1.4332 9.89406 1.98567 9.9355 2.35198 9.6203L9.51148 3.4598ZM15.0725 6.5854L18.7442 9.97993L15.0616 13.4087C13.8979 14.4922 12.0957 14.4953 10.9282 13.416L7.25652 10.0214L10.9391 6.59267C12.1028 5.50918 13.905 5.50601 15.0725 6.5854ZM11.875 10C11.875 9.37871 12.3787 8.87503 13 8.87503C13.6213 8.87503 14.125 9.37871 14.125 10C14.125 10.6214 13.6213 11.125 13 11.125C12.3787 11.125 11.875 10.6214 11.875 10ZM13 7.12503C11.4122 7.12503 10.125 8.41221 10.125 10C10.125 11.5879 11.4122 12.875 13 12.875C14.5878 12.875 15.875 11.5879 15.875 10C15.875 8.41221 14.5878 7.12503 13 7.12503Z" fill="url(#paint0_linear_84_2643)"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_84_2643" x1="0.78125" y1="10.0007" x2="25.2194" y2="10.0007" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#DD7DFF"/>
+                                                <stop offset="1" stop-color="#6AD2F4"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <span>Learn</span>
+                                </button>
+                            </div>
+                            <div class="back">
+                                <div class="back__group">
+                                    <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L65.2857 65.2857M65.2857 65.2857L92.4716 38.0998C94.8148 35.7566 94.8148 31.9576 92.4716 29.6145L65.2857 2.42857M65.2857 65.2857L32.4286 98.1429M35.2857 1L71 36.7143M38.1429 63.8571L1 101M101 63.8571L66.7143 98.1429" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1 1L65.2857 65.2857M65.2857 65.2857L92.4716 38.0998C94.8148 35.7566 94.8148 31.9576 92.4716 29.6145L65.2857 2.42857M65.2857 65.2857L32.4286 98.1429M35.2857 1L71 36.7143M38.1429 63.8571L1 101M101 63.8571L66.7143 98.1429" stroke="url(#paint0_linear_1_477)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_1_477" x1="1" y1="51" x2="101" y2="51" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#DD7DFF"/>
+                                                <stop offset="1" stop-color="#6AD2F4"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <p class="benefits__title">Risks control</p>
+                                </div>
+                                <p class="back__text">
+                                    Trixer - наш интеллектуальный скринер крипто рынков всегда на чеку 365дней в году. Он собирает данные и, если  на рынке назревает что-то интересное, тут же сообщает удобными для вас способами
+                                    (телеграм, смс, емейл итп).
+                                    Его текущие ключевые преимущества:
+                                </p>
+                                <ul class="back__list">
+                                    <li>мгновенное открытие в один клик графика, стакана в терминале,</li>
+                                    <li>молниеносный запуск бота прямо из скринера,</li>
+                                    <li>уведомления в терминал и телеграм о потенциальной сделке или торговой возможности</li>
+                                    <li>персональная настройка по фильтрам объемов</li>
+                                    <li>и изменения дельты цены за выбранный интервал времени</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                     <div class="benefits__group">
-                        <div class="benefits__card">
-                            <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 65.1026L37.3636 101M1 31.7692L37.3636 67.6667M71.1299 101L37.3636 67.6667M3.5974 3.5641L41.2597 40.7436M32.1688 1L64.2071 32.6275C66.5869 34.9768 66.5868 38.8181 64.2071 41.1674L37.3636 67.6667M65.9351 3.5641L95.3759 32.6275C97.7557 34.9768 97.7557 38.8181 95.3759 41.1674L72.8578 63.3967C70.4781 65.746 70.4781 69.5873 72.8578 71.9366L101 99.718" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M1 65.1026L37.3636 101M1 31.7692L37.3636 67.6667M71.1299 101L37.3636 67.6667M3.5974 3.5641L41.2597 40.7436M32.1688 1L64.2071 32.6275C66.5869 34.9768 66.5868 38.8181 64.2071 41.1674L37.3636 67.6667M65.9351 3.5641L95.3759 32.6275C97.7557 34.9768 97.7557 38.8181 95.3759 41.1674L72.8578 63.3967C70.4781 65.746 70.4781 69.5873 72.8578 71.9366L101 99.718" stroke="url(#paint0_linear_1_504)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <defs>
-                                    <linearGradient id="paint0_linear_1_504" x1="1" y1="51" x2="101" y2="51" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#DD7DFF"/>
-                                        <stop offset="1" stop-color="#6AD2F4"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                            <p class="benefits__title">Pro trading bots</p>
-
-                            <button class="btn benefits__btn">
-                                <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.51148 3.4598C11.5221 1.7297 14.493 1.72082 16.514 3.43886L20.9843 7.23909C21.1801 7.40556 21.1869 7.70559 20.9988 7.88073L20.0285 8.78408L16.2605 5.30043C14.4206 3.5994 11.5805 3.60439 9.7466 5.31188L3.8094 10.8398C2.85492 11.7285 2.88931 13.2509 3.88293 14.0956L8.35321 17.8958C11.0307 20.172 14.9668 20.1602 17.6306 17.8681L24.7901 11.7076C25.1564 11.3924 25.1979 10.8399 24.8827 10.4736C24.5675 10.1073 24.015 10.0659 23.6487 10.3811L16.4892 16.5416C14.4785 18.2717 11.5077 18.2805 9.48668 16.5625L5.0164 12.7623C4.82058 12.5958 4.8138 12.2958 5.00191 12.1206L5.97213 11.2173L9.74016 14.7009C11.58 16.402 14.4202 16.397 16.2541 14.6895L22.1913 9.16152C23.1458 8.27283 23.1114 6.75045 22.1177 5.90576L17.6475 2.10554C14.97 -0.170643 11.0339 -0.158878 8.37006 2.13328L1.21055 8.29378C0.844245 8.60898 0.80281 9.16145 1.11801 9.52775C1.4332 9.89406 1.98567 9.9355 2.35198 9.6203L9.51148 3.4598ZM15.0725 6.5854L18.7442 9.97993L15.0616 13.4087C13.8979 14.4922 12.0957 14.4953 10.9282 13.416L7.25652 10.0214L10.9391 6.59267C12.1028 5.50918 13.905 5.50601 15.0725 6.5854ZM11.875 10C11.875 9.37871 12.3787 8.87503 13 8.87503C13.6213 8.87503 14.125 9.37871 14.125 10C14.125 10.6214 13.6213 11.125 13 11.125C12.3787 11.125 11.875 10.6214 11.875 10ZM13 7.12503C11.4122 7.12503 10.125 8.41221 10.125 10C10.125 11.5879 11.4122 12.875 13 12.875C14.5878 12.875 15.875 11.5879 15.875 10C15.875 8.41221 14.5878 7.12503 13 7.12503Z" fill="url(#paint0_linear_84_2643)"/>
+                        <div class="benefits__card benefits__card--big wow animate__animated animate__fadeInUp">
+                            <div class="front">
+                                <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M38.1429 101L1 63.3188M36.7143 67.6667L8.00898 38.5453C5.70639 36.2094 5.70638 32.4573 8.00898 30.1213L36.7143 1M32.4286 37.2319L61.0127 8.23353C63.3626 5.84955 67.2088 5.84954 69.5588 8.23353L98.1429 37.2319M63.8571 101L101 63.3188M62.5 32L83.5 53M72.4204 62L47 87.4204M45 45L58 58" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M38.1429 101L1 63.3188M36.7143 67.6667L8.00898 38.5453C5.70639 36.2094 5.70638 32.4573 8.00898 30.1213L36.7143 1M32.4286 37.2319L61.0127 8.23353C63.3626 5.84955 67.2088 5.84954 69.5588 8.23353L98.1429 37.2319M63.8571 101L101 63.3188M62.5 32L83.5 53M72.4204 62L47 87.4204M45 45L58 58" stroke="url(#paint0_linear_1_492)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <defs>
-                                        <linearGradient id="paint0_linear_84_2643" x1="0.78125" y1="10.0007" x2="25.2194" y2="10.0007" gradientUnits="userSpaceOnUse">
+                                        <linearGradient id="paint0_linear_1_492" x1="1" y1="51" x2="101" y2="51" gradientUnits="userSpaceOnUse">
                                             <stop stop-color="#DD7DFF"/>
                                             <stop offset="1" stop-color="#6AD2F4"/>
                                         </linearGradient>
                                     </defs>
                                 </svg>
-                                <span>Learn</span>
-                            </button>
+                                <p class="benefits__title">Powerful smart trading + scalping terminal</p>
+
+                                <button class="btn benefits__btn">
+                                    <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.51148 3.4598C11.5221 1.7297 14.493 1.72082 16.514 3.43886L20.9843 7.23909C21.1801 7.40556 21.1869 7.70559 20.9988 7.88073L20.0285 8.78408L16.2605 5.30043C14.4206 3.5994 11.5805 3.60439 9.7466 5.31188L3.8094 10.8398C2.85492 11.7285 2.88931 13.2509 3.88293 14.0956L8.35321 17.8958C11.0307 20.172 14.9668 20.1602 17.6306 17.8681L24.7901 11.7076C25.1564 11.3924 25.1979 10.8399 24.8827 10.4736C24.5675 10.1073 24.015 10.0659 23.6487 10.3811L16.4892 16.5416C14.4785 18.2717 11.5077 18.2805 9.48668 16.5625L5.0164 12.7623C4.82058 12.5958 4.8138 12.2958 5.00191 12.1206L5.97213 11.2173L9.74016 14.7009C11.58 16.402 14.4202 16.397 16.2541 14.6895L22.1913 9.16152C23.1458 8.27283 23.1114 6.75045 22.1177 5.90576L17.6475 2.10554C14.97 -0.170643 11.0339 -0.158878 8.37006 2.13328L1.21055 8.29378C0.844245 8.60898 0.80281 9.16145 1.11801 9.52775C1.4332 9.89406 1.98567 9.9355 2.35198 9.6203L9.51148 3.4598ZM15.0725 6.5854L18.7442 9.97993L15.0616 13.4087C13.8979 14.4922 12.0957 14.4953 10.9282 13.416L7.25652 10.0214L10.9391 6.59267C12.1028 5.50918 13.905 5.50601 15.0725 6.5854ZM11.875 10C11.875 9.37871 12.3787 8.87503 13 8.87503C13.6213 8.87503 14.125 9.37871 14.125 10C14.125 10.6214 13.6213 11.125 13 11.125C12.3787 11.125 11.875 10.6214 11.875 10ZM13 7.12503C11.4122 7.12503 10.125 8.41221 10.125 10C10.125 11.5879 11.4122 12.875 13 12.875C14.5878 12.875 15.875 11.5879 15.875 10C15.875 8.41221 14.5878 7.12503 13 7.12503Z" fill="url(#paint0_linear_84_2643)"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_84_2643" x1="0.78125" y1="10.0007" x2="25.2194" y2="10.0007" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#DD7DFF"/>
+                                                <stop offset="1" stop-color="#6AD2F4"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <span>Learn</span>
+                                </button>
+                            </div>
+                            <div class="back">
+                                <div class="back__group">
+                                    <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M38.1429 101L1 63.3188M36.7143 67.6667L8.00898 38.5453C5.70639 36.2094 5.70638 32.4573 8.00898 30.1213L36.7143 1M32.4286 37.2319L61.0127 8.23353C63.3626 5.84955 67.2088 5.84954 69.5588 8.23353L98.1429 37.2319M63.8571 101L101 63.3188M62.5 32L83.5 53M72.4204 62L47 87.4204M45 45L58 58" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M38.1429 101L1 63.3188M36.7143 67.6667L8.00898 38.5453C5.70639 36.2094 5.70638 32.4573 8.00898 30.1213L36.7143 1M32.4286 37.2319L61.0127 8.23353C63.3626 5.84955 67.2088 5.84954 69.5588 8.23353L98.1429 37.2319M63.8571 101L101 63.3188M62.5 32L83.5 53M72.4204 62L47 87.4204M45 45L58 58" stroke="url(#paint0_linear_1_492)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_1_492" x1="1" y1="51" x2="101" y2="51" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#DD7DFF"/>
+                                                <stop offset="1" stop-color="#6AD2F4"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <p class="benefits__title">Powerful smart trading + scalping terminal</p>
+                                </div>
+                                <p class="back__text">
+                                    Trixer - наш интеллектуальный скринер крипто рынков всегда на чеку 365дней в году. Он собирает данные и, если  на рынке назревает что-то интересное, тут же сообщает удобными для вас способами
+                                    (телеграм, смс, емейл итп).
+                                    Его текущие ключевые преимущества:
+                                </p>
+                                <ul class="back__list">
+                                    <li>мгновенное открытие в один клик графика, стакана в терминале,</li>
+                                    <li>молниеносный запуск бота прямо из скринера,</li>
+                                    <li>уведомления в терминал и телеграм о потенциальной сделке или торговой возможности</li>
+                                    <li>персональная настройка по фильтрам объемов</li>
+                                    <li>и изменения дельты цены за выбранный интервал времени</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="benefits__card benefits__card--big">
-                            <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 101L35.2857 66.7143M101 69.5714L32.4286 1L62.4716 31.0431C64.8148 33.3862 64.8148 37.1852 62.4716 39.5284L35.2857 66.7143M35.2857 66.7143L69.5714 101M1 69.5714L31.0431 39.5284C33.3862 37.1852 33.3862 33.3862 31.0431 31.0431L1 1M63.8571 1L101 38.1429" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M1 101L35.2857 66.7143M101 69.5714L32.4286 1L62.4716 31.0431C64.8148 33.3862 64.8148 37.1852 62.4716 39.5284L35.2857 66.7143M35.2857 66.7143L69.5714 101M1 69.5714L31.0431 39.5284C33.3862 37.1852 33.3862 33.3862 31.0431 31.0431L1 1M63.8571 1L101 38.1429" stroke="url(#paint0_linear_1_498)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <defs>
-                                    <linearGradient id="paint0_linear_1_498" x1="1" y1="51" x2="101" y2="51" gradientUnits="userSpaceOnUse">
-                                        <stop stop-color="#DD7DFF"/>
-                                        <stop offset="1" stop-color="#6AD2F4"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                            <p class="benefits__title">Extra capital pools</p>
-
-                            <button class="btn benefits__btn">
-                                <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.51148 3.4598C11.5221 1.7297 14.493 1.72082 16.514 3.43886L20.9843 7.23909C21.1801 7.40556 21.1869 7.70559 20.9988 7.88073L20.0285 8.78408L16.2605 5.30043C14.4206 3.5994 11.5805 3.60439 9.7466 5.31188L3.8094 10.8398C2.85492 11.7285 2.88931 13.2509 3.88293 14.0956L8.35321 17.8958C11.0307 20.172 14.9668 20.1602 17.6306 17.8681L24.7901 11.7076C25.1564 11.3924 25.1979 10.8399 24.8827 10.4736C24.5675 10.1073 24.015 10.0659 23.6487 10.3811L16.4892 16.5416C14.4785 18.2717 11.5077 18.2805 9.48668 16.5625L5.0164 12.7623C4.82058 12.5958 4.8138 12.2958 5.00191 12.1206L5.97213 11.2173L9.74016 14.7009C11.58 16.402 14.4202 16.397 16.2541 14.6895L22.1913 9.16152C23.1458 8.27283 23.1114 6.75045 22.1177 5.90576L17.6475 2.10554C14.97 -0.170643 11.0339 -0.158878 8.37006 2.13328L1.21055 8.29378C0.844245 8.60898 0.80281 9.16145 1.11801 9.52775C1.4332 9.89406 1.98567 9.9355 2.35198 9.6203L9.51148 3.4598ZM15.0725 6.5854L18.7442 9.97993L15.0616 13.4087C13.8979 14.4922 12.0957 14.4953 10.9282 13.416L7.25652 10.0214L10.9391 6.59267C12.1028 5.50918 13.905 5.50601 15.0725 6.5854ZM11.875 10C11.875 9.37871 12.3787 8.87503 13 8.87503C13.6213 8.87503 14.125 9.37871 14.125 10C14.125 10.6214 13.6213 11.125 13 11.125C12.3787 11.125 11.875 10.6214 11.875 10ZM13 7.12503C11.4122 7.12503 10.125 8.41221 10.125 10C10.125 11.5879 11.4122 12.875 13 12.875C14.5878 12.875 15.875 11.5879 15.875 10C15.875 8.41221 14.5878 7.12503 13 7.12503Z" fill="url(#paint0_linear_84_2643)"/>
+                        <div class="benefits__card wow animate__animated animate__fadeInUp">
+                            <div class="front">
+                                <svg width="102" height="100" viewBox="0 0 102 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M67.6666 39L34.0306 5.36397C30.5159 1.84925 24.8174 1.84924 21.3027 5.36396L1 25.6667M62.3333 1.66667L101 40.3333M88 69.3333L58.3333 99M1 46.6667L27 20.6667M75 56H92C96.9705 56 101 60.0294 101 65V80.5M83.5 1.66667L101 19.1666M58.636 72.0306L39.364 91.3027C35.8492 94.8174 30.1508 94.8174 26.636 91.3027L7.36396 72.0306C3.84924 68.5159 3.84924 62.8174 7.36395 59.3027L26.636 40.0306C30.1508 36.5159 35.8493 36.5159 39.364 40.0306L58.636 59.3027C62.1507 62.8174 62.1507 68.5159 58.636 72.0306Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M67.6666 39L34.0306 5.36397C30.5159 1.84925 24.8174 1.84924 21.3027 5.36396L1 25.6667M62.3333 1.66667L101 40.3333M88 69.3333L58.3333 99M1 46.6667L27 20.6667M75 56H92C96.9705 56 101 60.0294 101 65V80.5M83.5 1.66667L101 19.1666M58.636 72.0306L39.364 91.3027C35.8492 94.8174 30.1508 94.8174 26.636 91.3027L7.36396 72.0306C3.84924 68.5159 3.84924 62.8174 7.36395 59.3027L26.636 40.0306C30.1508 36.5159 35.8493 36.5159 39.364 40.0306L58.636 59.3027C62.1507 62.8174 62.1507 68.5159 58.636 72.0306Z" stroke="url(#paint0_linear_1_486)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <defs>
-                                        <linearGradient id="paint0_linear_84_2643" x1="0.78125" y1="10.0007" x2="25.2194" y2="10.0007" gradientUnits="userSpaceOnUse">
+                                        <linearGradient id="paint0_linear_1_486" x1="1" y1="49" x2="101" y2="49" gradientUnits="userSpaceOnUse">
                                             <stop stop-color="#DD7DFF"/>
                                             <stop offset="1" stop-color="#6AD2F4"/>
                                         </linearGradient>
                                     </defs>
                                 </svg>
-                                <span>Learn</span>
-                            </button>
+                                <p class="benefits__title">Zero payments & cashback</p>
+
+                                <button class="btn benefits__btn">
+                                    <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.51148 3.4598C11.5221 1.7297 14.493 1.72082 16.514 3.43886L20.9843 7.23909C21.1801 7.40556 21.1869 7.70559 20.9988 7.88073L20.0285 8.78408L16.2605 5.30043C14.4206 3.5994 11.5805 3.60439 9.7466 5.31188L3.8094 10.8398C2.85492 11.7285 2.88931 13.2509 3.88293 14.0956L8.35321 17.8958C11.0307 20.172 14.9668 20.1602 17.6306 17.8681L24.7901 11.7076C25.1564 11.3924 25.1979 10.8399 24.8827 10.4736C24.5675 10.1073 24.015 10.0659 23.6487 10.3811L16.4892 16.5416C14.4785 18.2717 11.5077 18.2805 9.48668 16.5625L5.0164 12.7623C4.82058 12.5958 4.8138 12.2958 5.00191 12.1206L5.97213 11.2173L9.74016 14.7009C11.58 16.402 14.4202 16.397 16.2541 14.6895L22.1913 9.16152C23.1458 8.27283 23.1114 6.75045 22.1177 5.90576L17.6475 2.10554C14.97 -0.170643 11.0339 -0.158878 8.37006 2.13328L1.21055 8.29378C0.844245 8.60898 0.80281 9.16145 1.11801 9.52775C1.4332 9.89406 1.98567 9.9355 2.35198 9.6203L9.51148 3.4598ZM15.0725 6.5854L18.7442 9.97993L15.0616 13.4087C13.8979 14.4922 12.0957 14.4953 10.9282 13.416L7.25652 10.0214L10.9391 6.59267C12.1028 5.50918 13.905 5.50601 15.0725 6.5854ZM11.875 10C11.875 9.37871 12.3787 8.87503 13 8.87503C13.6213 8.87503 14.125 9.37871 14.125 10C14.125 10.6214 13.6213 11.125 13 11.125C12.3787 11.125 11.875 10.6214 11.875 10ZM13 7.12503C11.4122 7.12503 10.125 8.41221 10.125 10C10.125 11.5879 11.4122 12.875 13 12.875C14.5878 12.875 15.875 11.5879 15.875 10C15.875 8.41221 14.5878 7.12503 13 7.12503Z" fill="url(#paint0_linear_84_2643)"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_84_2643" x1="0.78125" y1="10.0007" x2="25.2194" y2="10.0007" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#DD7DFF"/>
+                                                <stop offset="1" stop-color="#6AD2F4"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <span>Learn</span>
+                                </button>
+                            </div>
+                            <div class="back">
+                                <div class="back__group">
+                                    <svg width="102" height="100" viewBox="0 0 102 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M67.6666 39L34.0306 5.36397C30.5159 1.84925 24.8174 1.84924 21.3027 5.36396L1 25.6667M62.3333 1.66667L101 40.3333M88 69.3333L58.3333 99M1 46.6667L27 20.6667M75 56H92C96.9705 56 101 60.0294 101 65V80.5M83.5 1.66667L101 19.1666M58.636 72.0306L39.364 91.3027C35.8492 94.8174 30.1508 94.8174 26.636 91.3027L7.36396 72.0306C3.84924 68.5159 3.84924 62.8174 7.36395 59.3027L26.636 40.0306C30.1508 36.5159 35.8493 36.5159 39.364 40.0306L58.636 59.3027C62.1507 62.8174 62.1507 68.5159 58.636 72.0306Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M67.6666 39L34.0306 5.36397C30.5159 1.84925 24.8174 1.84924 21.3027 5.36396L1 25.6667M62.3333 1.66667L101 40.3333M88 69.3333L58.3333 99M1 46.6667L27 20.6667M75 56H92C96.9705 56 101 60.0294 101 65V80.5M83.5 1.66667L101 19.1666M58.636 72.0306L39.364 91.3027C35.8492 94.8174 30.1508 94.8174 26.636 91.3027L7.36396 72.0306C3.84924 68.5159 3.84924 62.8174 7.36395 59.3027L26.636 40.0306C30.1508 36.5159 35.8493 36.5159 39.364 40.0306L58.636 59.3027C62.1507 62.8174 62.1507 68.5159 58.636 72.0306Z" stroke="url(#paint0_linear_1_486)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_1_486" x1="1" y1="49" x2="101" y2="49" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#DD7DFF"/>
+                                                <stop offset="1" stop-color="#6AD2F4"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <p class="benefits__title">Zero payments & cashback</p>
+                                </div>
+                                <p class="back__text">
+                                    Trixer - наш интеллектуальный скринер крипто рынков всегда на чеку 365дней в году. Он собирает данные и, если  на рынке назревает что-то интересное, тут же сообщает удобными для вас способами
+                                    (телеграм, смс, емейл итп).
+                                    Его текущие ключевые преимущества:
+                                </p>
+                                <ul class="back__list">
+                                    <li>мгновенное открытие в один клик графика, стакана в терминале,</li>
+                                    <li>молниеносный запуск бота прямо из скринера,</li>
+                                    <li>уведомления в терминал и телеграм о потенциальной сделке или торговой возможности</li>
+                                    <li>персональная настройка по фильтрам объемов</li>
+                                    <li>и изменения дельты цены за выбранный интервал времени</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="benefits__group">
+                        <div class="benefits__card wow animate__animated animate__fadeInUp">
+                            <div class="front">
+                                <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 65.1026L37.3636 101M1 31.7692L37.3636 67.6667M71.1299 101L37.3636 67.6667M3.5974 3.5641L41.2597 40.7436M32.1688 1L64.2071 32.6275C66.5869 34.9768 66.5868 38.8181 64.2071 41.1674L37.3636 67.6667M65.9351 3.5641L95.3759 32.6275C97.7557 34.9768 97.7557 38.8181 95.3759 41.1674L72.8578 63.3967C70.4781 65.746 70.4781 69.5873 72.8578 71.9366L101 99.718" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1 65.1026L37.3636 101M1 31.7692L37.3636 67.6667M71.1299 101L37.3636 67.6667M3.5974 3.5641L41.2597 40.7436M32.1688 1L64.2071 32.6275C66.5869 34.9768 66.5868 38.8181 64.2071 41.1674L37.3636 67.6667M65.9351 3.5641L95.3759 32.6275C97.7557 34.9768 97.7557 38.8181 95.3759 41.1674L72.8578 63.3967C70.4781 65.746 70.4781 69.5873 72.8578 71.9366L101 99.718" stroke="url(#paint0_linear_1_504)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_1_504" x1="1" y1="51" x2="101" y2="51" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#DD7DFF"/>
+                                            <stop offset="1" stop-color="#6AD2F4"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <p class="benefits__title">Pro trading bots</p>
+
+                                <button class="btn benefits__btn">
+                                    <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.51148 3.4598C11.5221 1.7297 14.493 1.72082 16.514 3.43886L20.9843 7.23909C21.1801 7.40556 21.1869 7.70559 20.9988 7.88073L20.0285 8.78408L16.2605 5.30043C14.4206 3.5994 11.5805 3.60439 9.7466 5.31188L3.8094 10.8398C2.85492 11.7285 2.88931 13.2509 3.88293 14.0956L8.35321 17.8958C11.0307 20.172 14.9668 20.1602 17.6306 17.8681L24.7901 11.7076C25.1564 11.3924 25.1979 10.8399 24.8827 10.4736C24.5675 10.1073 24.015 10.0659 23.6487 10.3811L16.4892 16.5416C14.4785 18.2717 11.5077 18.2805 9.48668 16.5625L5.0164 12.7623C4.82058 12.5958 4.8138 12.2958 5.00191 12.1206L5.97213 11.2173L9.74016 14.7009C11.58 16.402 14.4202 16.397 16.2541 14.6895L22.1913 9.16152C23.1458 8.27283 23.1114 6.75045 22.1177 5.90576L17.6475 2.10554C14.97 -0.170643 11.0339 -0.158878 8.37006 2.13328L1.21055 8.29378C0.844245 8.60898 0.80281 9.16145 1.11801 9.52775C1.4332 9.89406 1.98567 9.9355 2.35198 9.6203L9.51148 3.4598ZM15.0725 6.5854L18.7442 9.97993L15.0616 13.4087C13.8979 14.4922 12.0957 14.4953 10.9282 13.416L7.25652 10.0214L10.9391 6.59267C12.1028 5.50918 13.905 5.50601 15.0725 6.5854ZM11.875 10C11.875 9.37871 12.3787 8.87503 13 8.87503C13.6213 8.87503 14.125 9.37871 14.125 10C14.125 10.6214 13.6213 11.125 13 11.125C12.3787 11.125 11.875 10.6214 11.875 10ZM13 7.12503C11.4122 7.12503 10.125 8.41221 10.125 10C10.125 11.5879 11.4122 12.875 13 12.875C14.5878 12.875 15.875 11.5879 15.875 10C15.875 8.41221 14.5878 7.12503 13 7.12503Z" fill="url(#paint0_linear_84_2643)"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_84_2643" x1="0.78125" y1="10.0007" x2="25.2194" y2="10.0007" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#DD7DFF"/>
+                                                <stop offset="1" stop-color="#6AD2F4"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <span>Learn</span>
+                                </button>
+                            </div>
+                            <div class="back">
+                                <div class="back__group">
+                                    <svg width="102" height="100" viewBox="0 0 102 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M67.6666 39L34.0306 5.36397C30.5159 1.84925 24.8174 1.84924 21.3027 5.36396L1 25.6667M62.3333 1.66667L101 40.3333M88 69.3333L58.3333 99M1 46.6667L27 20.6667M75 56H92C96.9705 56 101 60.0294 101 65V80.5M83.5 1.66667L101 19.1666M58.636 72.0306L39.364 91.3027C35.8492 94.8174 30.1508 94.8174 26.636 91.3027L7.36396 72.0306C3.84924 68.5159 3.84924 62.8174 7.36395 59.3027L26.636 40.0306C30.1508 36.5159 35.8493 36.5159 39.364 40.0306L58.636 59.3027C62.1507 62.8174 62.1507 68.5159 58.636 72.0306Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M67.6666 39L34.0306 5.36397C30.5159 1.84925 24.8174 1.84924 21.3027 5.36396L1 25.6667M62.3333 1.66667L101 40.3333M88 69.3333L58.3333 99M1 46.6667L27 20.6667M75 56H92C96.9705 56 101 60.0294 101 65V80.5M83.5 1.66667L101 19.1666M58.636 72.0306L39.364 91.3027C35.8492 94.8174 30.1508 94.8174 26.636 91.3027L7.36396 72.0306C3.84924 68.5159 3.84924 62.8174 7.36395 59.3027L26.636 40.0306C30.1508 36.5159 35.8493 36.5159 39.364 40.0306L58.636 59.3027C62.1507 62.8174 62.1507 68.5159 58.636 72.0306Z" stroke="url(#paint0_linear_1_486)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_1_486" x1="1" y1="49" x2="101" y2="49" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#DD7DFF"/>
+                                                <stop offset="1" stop-color="#6AD2F4"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <p class="benefits__title">Zero payments & cashback</p>
+                                </div>
+                                <p class="back__text">
+                                    Trixer - наш интеллектуальный скринер крипто рынков всегда на чеку 365дней в году. Он собирает данные и, если  на рынке назревает что-то интересное, тут же сообщает удобными для вас способами
+                                    (телеграм, смс, емейл итп).
+                                    Его текущие ключевые преимущества:
+                                </p>
+                                <ul class="back__list">
+                                    <li>мгновенное открытие в один клик графика, стакана в терминале,</li>
+                                    <li>молниеносный запуск бота прямо из скринера,</li>
+                                    <li>уведомления в терминал и телеграм о потенциальной сделке или торговой возможности</li>
+                                    <li>персональная настройка по фильтрам объемов</li>
+                                    <li>и изменения дельты цены за выбранный интервал времени</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="benefits__card benefits__card--big wow animate__animated animate__fadeInUp">
+                            <div class="front">
+                                <svg width="102" height="102" viewBox="0 0 102 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 101L35.2857 66.7143M101 69.5714L32.4286 1L62.4716 31.0431C64.8148 33.3862 64.8148 37.1852 62.4716 39.5284L35.2857 66.7143M35.2857 66.7143L69.5714 101M1 69.5714L31.0431 39.5284C33.3862 37.1852 33.3862 33.3862 31.0431 31.0431L1 1M63.8571 1L101 38.1429" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M1 101L35.2857 66.7143M101 69.5714L32.4286 1L62.4716 31.0431C64.8148 33.3862 64.8148 37.1852 62.4716 39.5284L35.2857 66.7143M35.2857 66.7143L69.5714 101M1 69.5714L31.0431 39.5284C33.3862 37.1852 33.3862 33.3862 31.0431 31.0431L1 1M63.8571 1L101 38.1429" stroke="url(#paint0_linear_1_498)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <defs>
+                                        <linearGradient id="paint0_linear_1_498" x1="1" y1="51" x2="101" y2="51" gradientUnits="userSpaceOnUse">
+                                            <stop stop-color="#DD7DFF"/>
+                                            <stop offset="1" stop-color="#6AD2F4"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <p class="benefits__title">Extra capital pools</p>
+
+                                <button class="btn benefits__btn">
+                                    <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.51148 3.4598C11.5221 1.7297 14.493 1.72082 16.514 3.43886L20.9843 7.23909C21.1801 7.40556 21.1869 7.70559 20.9988 7.88073L20.0285 8.78408L16.2605 5.30043C14.4206 3.5994 11.5805 3.60439 9.7466 5.31188L3.8094 10.8398C2.85492 11.7285 2.88931 13.2509 3.88293 14.0956L8.35321 17.8958C11.0307 20.172 14.9668 20.1602 17.6306 17.8681L24.7901 11.7076C25.1564 11.3924 25.1979 10.8399 24.8827 10.4736C24.5675 10.1073 24.015 10.0659 23.6487 10.3811L16.4892 16.5416C14.4785 18.2717 11.5077 18.2805 9.48668 16.5625L5.0164 12.7623C4.82058 12.5958 4.8138 12.2958 5.00191 12.1206L5.97213 11.2173L9.74016 14.7009C11.58 16.402 14.4202 16.397 16.2541 14.6895L22.1913 9.16152C23.1458 8.27283 23.1114 6.75045 22.1177 5.90576L17.6475 2.10554C14.97 -0.170643 11.0339 -0.158878 8.37006 2.13328L1.21055 8.29378C0.844245 8.60898 0.80281 9.16145 1.11801 9.52775C1.4332 9.89406 1.98567 9.9355 2.35198 9.6203L9.51148 3.4598ZM15.0725 6.5854L18.7442 9.97993L15.0616 13.4087C13.8979 14.4922 12.0957 14.4953 10.9282 13.416L7.25652 10.0214L10.9391 6.59267C12.1028 5.50918 13.905 5.50601 15.0725 6.5854ZM11.875 10C11.875 9.37871 12.3787 8.87503 13 8.87503C13.6213 8.87503 14.125 9.37871 14.125 10C14.125 10.6214 13.6213 11.125 13 11.125C12.3787 11.125 11.875 10.6214 11.875 10ZM13 7.12503C11.4122 7.12503 10.125 8.41221 10.125 10C10.125 11.5879 11.4122 12.875 13 12.875C14.5878 12.875 15.875 11.5879 15.875 10C15.875 8.41221 14.5878 7.12503 13 7.12503Z" fill="url(#paint0_linear_84_2643)"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_84_2643" x1="0.78125" y1="10.0007" x2="25.2194" y2="10.0007" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#DD7DFF"/>
+                                                <stop offset="1" stop-color="#6AD2F4"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <span>Learn</span>
+                                </button>
+                            </div>
+                            <div class="back">
+                                <div class="back__group">
+                                    <svg width="102" height="100" viewBox="0 0 102 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M67.6666 39L34.0306 5.36397C30.5159 1.84925 24.8174 1.84924 21.3027 5.36396L1 25.6667M62.3333 1.66667L101 40.3333M88 69.3333L58.3333 99M1 46.6667L27 20.6667M75 56H92C96.9705 56 101 60.0294 101 65V80.5M83.5 1.66667L101 19.1666M58.636 72.0306L39.364 91.3027C35.8492 94.8174 30.1508 94.8174 26.636 91.3027L7.36396 72.0306C3.84924 68.5159 3.84924 62.8174 7.36395 59.3027L26.636 40.0306C30.1508 36.5159 35.8493 36.5159 39.364 40.0306L58.636 59.3027C62.1507 62.8174 62.1507 68.5159 58.636 72.0306Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M67.6666 39L34.0306 5.36397C30.5159 1.84925 24.8174 1.84924 21.3027 5.36396L1 25.6667M62.3333 1.66667L101 40.3333M88 69.3333L58.3333 99M1 46.6667L27 20.6667M75 56H92C96.9705 56 101 60.0294 101 65V80.5M83.5 1.66667L101 19.1666M58.636 72.0306L39.364 91.3027C35.8492 94.8174 30.1508 94.8174 26.636 91.3027L7.36396 72.0306C3.84924 68.5159 3.84924 62.8174 7.36395 59.3027L26.636 40.0306C30.1508 36.5159 35.8493 36.5159 39.364 40.0306L58.636 59.3027C62.1507 62.8174 62.1507 68.5159 58.636 72.0306Z" stroke="url(#paint0_linear_1_486)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_1_486" x1="1" y1="49" x2="101" y2="49" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#DD7DFF"/>
+                                                <stop offset="1" stop-color="#6AD2F4"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                    <p class="benefits__title">Zero payments & cashback</p>
+                                </div>
+                                <p class="back__text">
+                                    Trixer - наш интеллектуальный скринер крипто рынков всегда на чеку 365дней в году. Он собирает данные и, если  на рынке назревает что-то интересное, тут же сообщает удобными для вас способами
+                                    (телеграм, смс, емейл итп).
+                                    Его текущие ключевые преимущества:
+                                </p>
+                                <ul class="back__list">
+                                    <li>мгновенное открытие в один клик графика, стакана в терминале,</li>
+                                    <li>молниеносный запуск бота прямо из скринера,</li>
+                                    <li>уведомления в терминал и телеграм о потенциальной сделке или торговой возможности</li>
+                                    <li>персональная настройка по фильтрам объемов</li>
+                                    <li>и изменения дельты цены за выбранный интервал времени</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -433,7 +603,7 @@
                         </div>
                     </div>
                     <div class="table__body">
-                        <div class="row table__row space-between">
+                        <div class="row table__row space-between wow animate__animated animate__fadeInLeftBig" data-wow-duration="1.3s">
                             <div class="table__el table__el--currency table__el--20">
                                 <img src="assets/icons/btc.svg" alt="BTC">
                                 <span>Bitcoin</span> BTC
@@ -465,7 +635,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row table__row space-between">
+                        <div class="row table__row space-between wow animate__animated animate__fadeInLeftBig" data-wow-duration="1.3s">
                             <div class="table__el table__el--currency table__el--20">
                                 <img src="assets/icons/eth.svg" alt="ETH">
                                 <span>Ethereum</span> ETH
@@ -497,7 +667,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row table__row space-between">
+                        <div class="row table__row space-between wow animate__animated animate__fadeInLeftBig" data-wow-duration="1.3s">
                             <div class="table__el table__el--currency table__el--20">
                                 <img src="assets/icons/teth.svg" alt="USDT">
                                 <span>Tether</span> USDT
@@ -529,7 +699,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row table__row space-between">
+                        <div class="row table__row space-between wow animate__animated animate__fadeInLeftBig" data-wow-duration="1.3s">
                             <div class="table__el table__el--currency table__el--20">
                                 <img src="assets/icons/sol.svg" alt="SOL">
                                 <span>Solana</span> SOL
@@ -561,7 +731,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row table__row space-between">
+                        <div class="row table__row space-between wow animate__animated animate__fadeInLeftBig" data-wow-duration="1.3s">
                             <div class="table__el table__el--currency table__el--20">
                                 <img src="assets/icons/card.svg" alt="ADA">
                                 <span>Cardano</span> ADA
@@ -593,7 +763,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row table__row space-between">
+                        <div class="row table__row space-between wow animate__animated animate__fadeInLeftBig" data-wow-duration="1.3s">
                             <div class="table__el table__el--currency table__el--20">
                                 <img src="assets/icons/lite.svg" alt="LTC">
                                 <span>Litecoin</span> LTC
@@ -639,7 +809,7 @@
                 <h2 class="title">Enter our mailing list <br> to be the first</h2>
                 <p class="mailing__subtitle">for beta-testing of limited pro features</p>
 
-                <form action="#" class="mailing__form">
+                <form action="#" class="mailing__form wow animate__animated animate__bounceInUp">
                     <svg width="120" height="83" viewBox="0 0 120 83" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g opacity="0.25">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5594 46.2412C7.55707 49.7561 7.64065 58.4608 13.7094 61.8598L38.4328 75.7071C46.4965 80.2234 56.3517 80.1196 64.3184 75.4343L106.463 50.6487C112.457 47.1237 112.359 38.4226 106.288 35.0328L81.5999 21.2486C73.5562 16.7575 63.7365 16.8583 55.7867 21.5136L13.5594 46.2412Z" fill="url(#paint0_linear_60_3229)"/>
@@ -672,28 +842,28 @@
                 <h2 class="title title--white">How to get <br> started Easy</h2>
 
                 <div class="get-started__wrapper">
-                    <div class="get-started__element get-started__element--multi l-1">
+                    <div class="get-started__element get-started__element--multi l-1 wow animate__animated animate__fadeInUpBig">
                         <p class="get-started__title get-started__title--big">Register free now</p>
                         <p class="get-started__subtitle">You pay only for external exchange transactions - with lowest fees available</p>
                         <button class="btn get-started__btn">Sign up</button>
                     </div>
-                    <div class="get-started__element get-started__element--cherry l-2">
+                    <div class="get-started__element get-started__element--cherry l-2 wow animate__animated animate__fadeInUpBig">
                         <p class="get-started__title">Open account or connect yours</p>
                         <p class="get-started__subtitle">incl. external exchange accounts, wallets or get free</p>
                     </div>
-                    <div class="get-started__element get-started__element--cherry l-3">
+                    <div class="get-started__element get-started__element--cherry l-3 wow animate__animated animate__fadeInUpBig">
                         <p class="get-started__title">Trade & invest</p>
                         <p class="get-started__subtitle">benefit from all advantages with minimal transaction fees</p>
                     </div>
-                    <div class="get-started__element get-started__element--green l-4">
+                    <div class="get-started__element get-started__element--green l-4 wow animate__animated animate__fadeInUpBig">
                         <p class="get-started__title">Make your referal link</p>
                         <p class="get-started__subtitle">more community members- more support & leverage</p>
                     </div>
-                    <div class="get-started__element get-started__element--green l-5">
+                    <div class="get-started__element get-started__element--green l-5 wow animate__animated animate__fadeInUpBig">
                         <p class="get-started__title">Get extra cashback</p>
                         <p class="get-started__subtitle">up to 30%</p>
                     </div>
-                    <div class="get-started__element get-started__element--green l-6">
+                    <div class="get-started__element get-started__element--green l-6 wow animate__animated animate__fadeInUpBig">
                         <p class="get-started__title get-started__title--big">Earn</p>
                         <p class="get-started__subtitle">Log in to start earning</p>
                         <button class="btn get-started__btn get-started__btn--transparent">Log in</button>
@@ -719,6 +889,9 @@
         </div>
     </main>
 </body>
-
 <script src="assets/scripts/custom.js"></script>
+<script src="assets/scripts/lib/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
 </html>

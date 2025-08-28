@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WorldTrends</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <header class="wrap top" role="banner">
+    <div class="brand">
+      <a href="#" class="logo" aria-hidden="true">
+        <img src="assets/images/Logotype.svg" alt="WorldTrends">
+      </a>
+    </div>
+    <nav class="tabs" role="tablist" aria-label="Sections">
+      <button class="tab" role="tab" id="tab-charts" aria-controls="panel-charts" aria-selected="true">Charts</button>
+      <button class="tab" role="tab" id="tab-news" aria-controls="panel-news" aria-selected="false">News</button>
+    </nav>
+  </header>
+  <main id="panel-charts" class="wrap" role="tabpanel" aria-labelledby="tab-charts">
+    <h1>Charts</h1>
+
+    <section class="metrics" aria-label="Series totals">
+      <div class="metric red">Chart 1 <span id="m1">—</span></div>
+      <div class="metric blue">Chart 2 <span id="m2">—</span></div>
+    </section>
+
+    <section class="strip" aria-label="Months slider">
+      <button class="btn" id="prev" aria-label="Scroll months left">←</button>
+      <div class="row">
+        <div id="chips" class="chips" role="tablist" aria-label="Months"></div>
+      </div>
+      <button class="btn" id="next" aria-label="Scroll months right">→</button>
+    </section>
+
+    <section class="card" aria-label="Chart">
+      <span class="y-unit">TB</span>
+      <canvas id="chart" height="320"></canvas>
+      <p class="note">Hover to see values. Click a month to switch the data.</p>
+    </section>
+  </main>
+
+  <section id="panel-news" class="wrap hidden" role="tabpanel" aria-labelledby="tab-news">
+    <div class="news-grid">
+      <a href="#" class="hero-inner" tabindex="0">
+        <h2 class="hero-title">Matt Gaetz quits House after he is picked by Trump for attorney general role</h2>
+        <img src="assets/images/news/trump.jpg" alt="Features">
+        <div class="hero-actions">
+          <span class="btn2">Explore →</span>
+        </div>
+      </a>
+
+      <aside class="news-list" aria-label="Top stories">
+        <a href="#" class="news-item">
+          <h4>World’s largest coral found</h4>
+          <p>The coral could be 500 years old and is bigger than a blue whale The coral could be 500 years old and is
+            bigger than a blue whale</p>
+          <div class="news-meta">2 hrs ago | Climate</div>
+        </a>
+        <a href="#" class="news-item">
+          <h4>Menopause, the other menstrual taboo Menopause, the other menstrual taboo</h4>
+          <p>In India, conversation on menstruation is still taboo In India, conversation on menstruation is still taboo
+          </p>
+          <div class="news-meta">4 hrs ago | Asia</div>
+        </a>
+        <a href="#" class="news-item">
+          <h4>Why Canada could become the next</h4>
+          <p>With its rich resources, uranium mining companies want Canada With its rich resources, uranium mining
+            companies want Canada</p>
+          <div class="news-meta">5 hrs ago | US &amp; Canada</div>
+        </a>
+        <a href="#" class="news-item">
+          <h4>Why does Pharrell’s biopic sidestep Why does Pharrell’s biopic sidestep</h4>
+          <p>The musician was fined $5m in a plagiarism lawsuit The musician was fined $5m in a plagiarism lawsuit</p>
+          <div class="news-meta">2 hrs ago | Climate</div>
+        </a>
+      </aside>
+    </div>
+
+    <div class="news-section">
+      <h2>Latest News</h2>
+
+      <div class="news-cards" id="newsCards">
+        <a href="#" class="ncard">
+          <img src="https://picsum.photos/seed/n1/600/400" alt="">
+          <div class="p">
+            <h5>Inside the secret summit that tried to stop deadly rap wars</h5>
+            <p>Producers brought stars together to try to end violence Producers brought stars together to try to end
+              violence</p>
+          </div>
+        </a>
+        <a href="#" class="ncard">
+          <img src="https://picsum.photos/seed/n2/600/400" alt="">
+          <div class="p">
+            <h5>Unemployment rises as pay growth slows again</h5>
+            <p>Official figures suggest growth continues to slow</p>
+          </div>
+        </a>
+        <a href="#" class="ncard">
+          <img src="https://picsum.photos/seed/n3/600/400" alt="">
+          <div class="p">
+            <h5>When horror hits China, the first instinct is shut it down</h5>
+            <p>Reaction from authorities is often swift</p>
+          </div>
+        </a>
+        <a href="#" class="ncard">
+          <img src="https://picsum.photos/seed/n4/600/400" alt="">
+          <div class="p">
+            <h5>Zendaya: Working with Tom Holland is 'second nature'</h5>
+            <p>The actress says working with her boyfriend is comfortable</p>
+          </div>
+        </a>
+        <a href="#" class="ncard">
+          <img src="https://picsum.photos/seed/n5/600/400" alt="">
+          <div class="p">
+            <h5>Cheap fix floated for plane vapour’s climate damage</h5>
+            <p>Impact of vapour trails is being discussed</p>
+          </div>
+        </a>
+        <a href="#" class="ncard">
+          <img src="https://picsum.photos/seed/n6/600/400" alt="">
+          <div class="p">
+            <h5>Does Kane's criticism expose England cracks?</h5>
+            <p>England absentees increase sense of drift</p>
+          </div>
+        </a>
+        <a href="#" class="ncard">
+          <img src="https://picsum.photos/seed/n7/600/400" alt="">
+          <div class="p">
+            <h5>Some players 'lucky enough' to face Pumas – Farrell</h5>
+            <p>Farrell welcomes pressure after last week’s win</p>
+          </div>
+        </a>
+        <a href="#" class="ncard">
+          <img src="https://picsum.photos/seed/n8/600/400" alt="">
+          <div class="p">
+            <h5>How Japan’s youngest CEO transformed Hello Kitty</h5>
+            <p>At 50th anniversary, the firm behind it is a titan</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="center">
+        <button id="readMore" class="btn2">Read more</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/chart.js"></script>
+  <script src="assets/js/news.js"></script>
+</body>
+
+</html>

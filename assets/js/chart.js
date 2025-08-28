@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const chips = document.getElementById("chips");
   const btnPrev = document.getElementById("prev");
   const btnNext = document.getElementById("next");
+  let isPointerDown = false;
 
   btnPrev.addEventListener("click", () => {
     chips.scrollBy({ left: -260, behavior: "smooth" });
@@ -195,32 +196,38 @@ document.addEventListener("DOMContentLoaded", () => {
     chips.scrollBy({ left: 260, behavior: "smooth" })
   );
 
+  chips.addEventListener("pointerdown", () => {
+    isPointerDown = true;
+    setTimeout(() => (isPointerDown = false), 0); // сбросим после события
+  });
+
+  chips.addEventListener("focusin", (e) => {
+    if (isPointerDown) return; // пропускаем, если фокус пришёл от клика
+    const chip = e.target.closest(".chip");
+    if (chip) {
+      setActive(+chip.dataset.i, true);
+    }
+  });
+
   chips.addEventListener("click", (e) => {
     const b = e.target.closest(".chip");
     if (!b) return;
     setActive(+b.dataset.i, true);
   });
 
-  chips.addEventListener('focusin', e => {
-    const chip = e.target.closest('.chip');
-    if (chip) {
-      setActive(+chip.dataset.i, true);
-    }
-  });
-
-  chips.addEventListener('keydown', e => {
-    const focusable = [...chips.querySelectorAll('.chip')];
+  chips.addEventListener("keydown", (e) => {
+    const focusable = [...chips.querySelectorAll(".chip")];
     const idx = focusable.indexOf(document.activeElement);
     if (idx < 0) return;
 
-    if (e.key === 'ArrowRight') {
+    if (e.key === "ArrowRight") {
       e.preventDefault();
-      const next = focusable[idx+1] || focusable[0];
+      const next = focusable[idx + 1] || focusable[0];
       next.focus();
     }
-    if (e.key === 'ArrowLeft') {
+    if (e.key === "ArrowLeft") {
       e.preventDefault();
-      const prev = focusable[idx-1] || focusable.at(-1);
+      const prev = focusable[idx - 1] || focusable.at(-1);
       prev.focus();
     }
   });
